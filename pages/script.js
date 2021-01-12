@@ -1,6 +1,8 @@
+import Menu from "@/components/menu/main-menu.vue";
+
 export default {
     components: {
-
+        Menu
     },
     head: () => ({
         // title: 'Mido的The-F2E挑戰｜01.TodoList',
@@ -9,8 +11,8 @@ export default {
     mounted() {
         this.$nextTick(() => {
             this.$nuxt.$loading.start()
-            setTimeout(() => this.$nuxt.$loading.finish(), 2000)
-          })
+            setTimeout(() => this.$nuxt.$loading.finish(), 5000)
+        })
 
         $(document).ready(function (e) {
 
@@ -30,14 +32,6 @@ export default {
                 var num = test
 
                 $('#mousefollow').css({ "left": e.pageX + -10, "top": e.pageY + -10 });
-
-                // console.log(Y)
-                // console.log(+[]=;)
-
-                // console.log($(document).scrollTop())
-
-
-
             })
 
             $('#mousefollow').css({ "left": e.pageX + -10, "top": e.pageY + -10 });
