@@ -32,12 +32,15 @@ export default {
     '@/assets/css/main.scss'
   ],
 
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
+
+  loading: '~/components/Loading.vue',
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
