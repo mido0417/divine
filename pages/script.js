@@ -5,7 +5,13 @@ export default {
     head: () => ({
         // title: 'Mido的The-F2E挑戰｜01.TodoList',
     }),
+
     mounted() {
+        this.$nextTick(() => {
+            this.$nuxt.$loading.start()
+            setTimeout(() => this.$nuxt.$loading.finish(), 2000)
+          })
+
         $(document).ready(function (e) {
 
             var xPos = 0;
