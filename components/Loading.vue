@@ -51,6 +51,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .pix {
@@ -141,7 +142,7 @@ export default {
   }
 }
 
-.fade-leave-active {
+.fade-leave-active,.fade-enter-active {
   transition: all .3s ease;
 }
 

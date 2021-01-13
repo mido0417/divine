@@ -4,13 +4,13 @@
   nav.menu
     ul
       li
-        a(href="#") HOME
+        nuxt-link(to="/") HOME
       li
-        a(href="#") BLOG
+        nuxt-link(to="/blog") BLOG
       li
         a(href="#") CONTACT
       li
-        a(href="#") PODCAST
+        a(href="https://open.firstory.me/user/life-circle/platforms") PODCAST
 </template>
 
 <script>
