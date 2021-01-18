@@ -1,6 +1,7 @@
 <template lang="pug">
 .menu-wrap
   .logo
+    p Logo圖來自Keyi@i11w11
   nav.menu
     ul
       li
@@ -64,12 +65,30 @@ export default {};
   .logo {
     width: 100px;
     height: 100px;
-    background-image: url('https://images.plurk.com/3rNys2JdaYjm2Y39jCqAwj.png');
+    background-image: url("https://images.plurk.com/3rNys2JdaYjm2Y39jCqAwj.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
     margin: 20px 0 10px;
+    position: relative;
+
+    p {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 5px;
+      position: absolute;
+      left: 45px;
+      top: 45px;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    &:hover {
+      p {
+        opacity: 1;
+      }
+    }
   }
 }
 </style>

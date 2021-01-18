@@ -22,7 +22,7 @@ export default {};
   box-sizing: border-box;
 } */
 
-h1 {
+/* h1 {
   display: none;
-}
+} */
 </style>
