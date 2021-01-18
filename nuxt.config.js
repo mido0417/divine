@@ -8,14 +8,23 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'divine',
+    title: '四月塔羅 | 探索自我，發現內心的光芒',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '探索自我，發現內心的光芒' },
+      { hid: 'og:title'  , property: 'og:title'  , content: 'KenLee'},
+      { hid: 'og:description' , property: 'og:description' , content: '探索自我，發現內心的光芒'},
+      { hid: 'og:url' , property: 'og:url' , content: 'https://ken551113.github.io/'},
+      { hid: 'og:image' , property: 'og:image' , content: 'https://ken551113.github.io/image.jpg'},
+      { hid: 'og:type' , property: 'og:type' , content: 'website'},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans:wght@400;700&display=swap'
+      },
       {
         rel: 'stylesheet',
         href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
