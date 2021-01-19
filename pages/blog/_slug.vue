@@ -1,22 +1,31 @@
 <template>
-  <article>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
-    <img :src="article.img" :alt="article.alt" />
-    <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
+  <div>
+    <Menu />
+    <article>
+      <h1>{{ article.title }}</h1>
+      <p>{{ article.description }}</p>
+      <img :src="article.img" :alt="article.alt" />
+      <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
-    <nuxt-content :document="article" />
+      <nuxt-content :document="article" />
 
-    <!-- <author :author="article.author" /> -->
+      <!-- <author :author="article.author" /> -->
 
-    <prev-next :prev="prev" :next="next" />
-  </article>
+      <prev-next :prev="prev" :next="next" />
+    </article>
+  </div>
 </template>
 
 
 
 <script>
+import Menu from "@/components/menu/main-menu.vue";
+
 export default {
+  components: {
+    Menu,
+  },
+
   async asyncData({ $content, params, error }) {
     try {
       const article = await $content("articles", params.slug).fetch();

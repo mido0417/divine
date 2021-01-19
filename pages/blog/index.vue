@@ -1,17 +1,33 @@
 <template>
-  <div>
-      <Menu />
-    <h1>Blog Posts</h1>
-    <ul>
-      <li v-for="article of articles" :key="article.slug">
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-          <img :src="article.img" />
-          <div>
-            <h2>{{ article.title }}</h2>
-            <p>by {{ article.author.name }}</p>
-            <p>{{ article.description }}</p>
+  <div id="blog">
+    <Menu />
+    <ul class="content-wrap">
+      <li class="blog-item" v-for="article of articles" :key="article.slug">
+        <div
+          class="cover-img"
+          :style="{ backgroundImage: 'url(' + article.img + ')' }"
+        ></div>
+        <div class="item-wrap">
+          <h2 class="article-title">
+            <NuxtLink
+              :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+            >
+              {{ article.title }}</NuxtLink
+            >
+          </h2>
+          <p class="description">{{ article.description }}</p>
+          <div class="info-wrap">
+            <p class="author">{{ article.author.name }}</p>
+            <p class="pos-time">{{ formatDate(article.createdAt) }}</p>
           </div>
-        </NuxtLink>
+          <NuxtLink
+            :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+            class="more"
+            >Read More</NuxtLink
+          >
+        </div>
+
+        <!-- <pre>{{ article }}</pre> -->
       </li>
     </ul>
   </div>
@@ -21,28 +37,88 @@
 import Menu from "@/components/menu/main-menu.vue";
 
 export default {
-    components: {
-        Menu
-    },
-        async asyncData({ $content, params }) {
-      const articles = await $content('articles', params.slug)
-        .only(['title', 'description', 'img', 'slug', 'author'])
-        .sortBy('createdAt', 'asc')
-        .fetch()
+  components: {
+    Menu,
+  },
+  async asyncData({ $content, params }) {
+    const articles = await $content("articles", params.slug)
+      .only(["title", "description", "img", "slug", "author", "createdAt"])
+      .sortBy("createdAt", "asc")
+      .fetch();
 
-      return {
-        articles
-      }
+    return {
+      articles,
+    };
+  },
+
+  methods: {
+    formatDate(date) {
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString(options);
     },
-    mounted() {
-        this.$nextTick(() => {
-            this.$nuxt.$loading.start()
-            setTimeout(() => this.$nuxt.$loading.finish(), 500)
-          })
-    }
-}
+  },
+
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 500);
+    });
+  },
+};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.content-wrap {
+  margin: 0 auto;
+  max-width: 1100px;
+}
 
+.blog-item {
+  display: flex;
+  padding: 35px 0;
+  border-bottom: 1px solid rgb(128 128 128 / 0.2);
+  a,div,p {
+    text-decoration: none;
+    color: rgb(0 0 0 / 0.7);
+  }
+  .cover-img {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+  }
+
+  .item-wrap {
+    width: 100%;
+    position: relative;
+    > div,
+    > p,
+    > h2 {
+      margin-bottom: 10px;
+    }
+    .more {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .article-title {
+      font-size: 24px;
+    }
+
+    .info-wrap {
+      display: flex;
+      align-items: center;
+      .author {
+        &::after {
+          content: "｜";
+          display: inline-block;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
 </style>
