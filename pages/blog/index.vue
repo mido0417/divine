@@ -70,7 +70,7 @@ export default {
 <style lang="scss" scoped>
 .content-wrap {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
   max-width: 100%;
   @media (min-width: $md) {
     max-width: 1100px;

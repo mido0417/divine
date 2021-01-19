@@ -16,7 +16,7 @@ export default {
       { hid: 'og:title', property: 'og:title', content: '四月塔羅 | 探索自我，發現內心的光芒' },
       { hid: 'og:description', property: 'og:description', content: '探索自我，發現內心的光芒' },
       { hid: 'og:url', property: 'og:url', content: 'https://hellomido.space/divine/' },
-      { hid: 'og:image', property: 'og:image', content: '' },
+      { hid: 'og:image', property: 'og:image', content: 'https://images.plurk.com/929Y7dQyKQLkJuWSdI5BS.png' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
     ],
     link: [
