@@ -13,11 +13,11 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '探索自我，發現內心的光芒' },
-      { hid: 'og:title'  , property: 'og:title'  , content: 'KenLee'},
-      { hid: 'og:description' , property: 'og:description' , content: '探索自我，發現內心的光芒'},
-      { hid: 'og:url' , property: 'og:url' , content: 'https://ken551113.github.io/'},
-      { hid: 'og:image' , property: 'og:image' , content: 'https://ken551113.github.io/image.jpg'},
-      { hid: 'og:type' , property: 'og:type' , content: 'website'},
+      { hid: 'og:title', property: 'og:title', content: 'KenLee' },
+      { hid: 'og:description', property: 'og:description', content: '探索自我，發現內心的光芒' },
+      { hid: 'og:url', property: 'og:url', content: 'https://ken551113.github.io/' },
+      { hid: 'og:image', property: 'og:image', content: 'https://ken551113.github.io/image.jpg' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -37,7 +37,7 @@ export default {
     script: [
       {
         src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
-      },{
+      }, {
         src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js',
       },
     ],
@@ -45,7 +45,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '@/assets/css/main.scss'
+    '@/assets/scss/main.scss'
   ],
 
 
@@ -64,9 +64,14 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/style-resources',
   ],
-
+  styleResources: {
+    scss: [
+      './assets/scss/_style.scss',
+    ]
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     plugins: [

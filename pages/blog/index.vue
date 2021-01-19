@@ -70,14 +70,21 @@ export default {
 <style lang="scss" scoped>
 .content-wrap {
   margin: 0 auto;
-  max-width: 1100px;
+  padding: 0 30px;
+  max-width: 100%;
+  @media (min-width: $md) {
+    max-width: 1100px;
+    padding: 0;
+  }
 }
 
 .blog-item {
   display: flex;
   padding: 35px 0;
   border-bottom: 1px solid rgb(128 128 128 / 0.2);
-  a,div,p {
+  a,
+  div,
+  p {
     text-decoration: none;
     color: rgb(0 0 0 / 0.7);
   }
@@ -87,7 +94,10 @@ export default {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-right: 30px;
+    margin-right: 15px;
+    @media (min-width: $md) {
+      margin-right: 30px;
+    }
   }
 
   .item-wrap {
