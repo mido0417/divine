@@ -40,6 +40,11 @@ export default {
       }, {
         src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js',
       },
+      {
+        hid:"tawk.to",
+        src:"https://embed.tawk.to/6009825ea9a34e36b96ed6ca/1esiiagv5",
+        defer: true
+      },
     ],
   },
 

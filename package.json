@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
+    "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6"
   },
@@ -23,6 +24,7 @@
     "pug-plain-loader": "^1.1.0",
     "push-dir": "^0.4.1",
     "sass": "^1.32.2",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^10.1.1",
+    "vue-tawk": "^1.0.1"
   }
 }
