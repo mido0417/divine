@@ -17,7 +17,8 @@
           </h2>
           <p class="description">{{ article.description }}</p>
           <div class="info-wrap">
-            <p class="author">{{ article.author.name }}</p>
+            <!-- <p class="author">{{ article.author.name }}</p> -->
+            <p class="pos-time">{{ article.tags }}</p>
             <p class="pos-time">{{ formatDate(article.createdAt) }}</p>
           </div>
           <NuxtLink
@@ -42,7 +43,7 @@ export default {
   },
   async asyncData({ $content, params }) {
     const articles = await $content("articles", params.slug)
-      .only(["title", "description", "img", "slug", "author", "createdAt"])
+      .only(["title", "description", "img", "slug", "author", "createdAt", "tags"])
       .sortBy("createdAt", "asc")
       .fetch();
 
@@ -74,7 +75,7 @@ export default {
   max-width: 100%;
   @media (min-width: $md) {
     max-width: 1100px;
-    padding: 0;
+    // padding: 0;
   }
 }
 
@@ -82,6 +83,13 @@ export default {
   display: flex;
   padding: 35px 0;
   border-bottom: 1px solid rgb(128 128 128 / 0.2);
+  flex-direction: column;
+  
+
+  @media (min-width: $md) {
+    flex-direction: row;
+  }
+
   a,
   div,
   p {
@@ -89,13 +97,14 @@ export default {
     color: rgb(0 0 0 / 0.7);
   }
   .cover-img {
-    width: 300px;
+    width: 100%;
     height: 200px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 15px;
     @media (min-width: $md) {
+      width: 300px;
       margin-right: 30px;
     }
   }
