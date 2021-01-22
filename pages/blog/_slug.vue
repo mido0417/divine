@@ -12,7 +12,6 @@
       <div
         class="likecoin-embed likecoin-button"
         data-liker-id="mido0417"
-        :data-href="$nuxt.$route.path"
       ></div>
       <script src="https://static.like.co/sdk/v1/button.js"></script>
       <!-- <author :author="article.author" /> -->
@@ -116,6 +115,14 @@ export default {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("zh-TW", options);
     },
+  },
+
+  mounted() {
+    $(document).ready(function (e) {
+      let baseUrl = window.location.href;
+
+      $(".likecoin-button").attr("data-href", baseUrl);
+    });
   },
 };
 </script>
