@@ -11,7 +11,7 @@
       <nuxt-content :document="article" />
       <div
         class="likecoin-embed likecoin-button"
-        data-liker-id="{mido0417}"
+        data-liker-id="mido0417"
         :data-href="$nuxt.$route.path"
       ></div>
       <script src="https://static.like.co/sdk/v1/button.js"></script>
