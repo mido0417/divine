@@ -44,7 +44,7 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content("articles", params.slug)
       .only(["title", "description", "img", "slug", "author", "createdAt", "tax"])
-      .sortBy("createdAt", "asc")
+      .sortBy("createdAt", "desc")
       .fetch();
 
     return {
@@ -104,7 +104,7 @@ export default {
     background-repeat: no-repeat;
     margin-right: 15px;
     @media (min-width: $md) {
-      width: 300px;
+      width: 400px;
       margin-right: 30px;
     }
   }
