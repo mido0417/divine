@@ -1,36 +1,35 @@
 <template>
-  <div class="flex justify-between">
+  <div class="pager">
     <NuxtLink
       v-if="prev"
       :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
-      class="text-primary font-bold hover:underline"
-    >
-      {{ prev.title }}
+      class="prev"
+    > < {{ prev.title }}
     </NuxtLink>
     <span v-else>&nbsp;</span>
     <NuxtLink
       v-if="next"
       :to="{ name: 'blog-slug', params: { slug: next.slug } }"
-      class="font-bold hover:underline"
+      class="next"
     >
-      {{ next.title }}
+      {{ next.title }} >
     </NuxtLink>
     <span v-else>&nbsp;</span>
   </div>
 </template>
 
 <script>
-  export default {
-    props: {
-      prev: {
-        type: Object,
-        default: () => null
-      },
-      next: {
-        type: Object,
-        default: () => null
-      }
-    }
-  }
+export default {
+  props: {
+    prev: {
+      type: Object,
+      default: () => null,
+    },
+    next: {
+      type: Object,
+      default: () => null,
+    },
+  },
+};
 </script>
 
