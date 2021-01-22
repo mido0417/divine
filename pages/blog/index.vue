@@ -18,7 +18,7 @@
           <p class="description">{{ article.description }}</p>
           <div class="info-wrap">
             <!-- <p class="author">{{ article.author.name }}</p> -->
-            <p class="pos-time">{{ article.tags }}</p>
+            <p class="pos-time">{{ article.tax }}</p>
             <p class="pos-time">{{ formatDate(article.createdAt) }}</p>
           </div>
           <NuxtLink
@@ -43,7 +43,7 @@ export default {
   },
   async asyncData({ $content, params }) {
     const articles = await $content("articles", params.slug)
-      .only(["title", "description", "img", "slug", "author", "createdAt", "tags"])
+      .only(["title", "description", "img", "slug", "author", "createdAt", "tax"])
       .sortBy("createdAt", "asc")
       .fetch();
 

@@ -3,7 +3,8 @@ title: 夢境紀錄01：異世界抓交替
 description: 在睡夢中我感覺自己的視線裂成兩半，一半是另一個世界的我看到的畫面、另一半是⋯⋯
 img: https://images.plurk.com/929Y7dQyKQLkJuWSdI5BS.png
 alt: my first blog post
-tags: 夢境 異世界
+tax: 夢境紀錄
+createdAt: 2021-01-19
 author:
   name: Mido
 ---

@@ -120,7 +120,6 @@ export default {
   mounted() {
     $(document).ready(function (e) {
       let baseUrl = window.location.href;
-
       $(".likecoin-button").attr("data-href", baseUrl);
     });
   },
