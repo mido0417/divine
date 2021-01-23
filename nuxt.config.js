@@ -94,5 +94,8 @@ export default {
         'window.jQuery': 'jquery'
       })
     ]
-  }
+  },
+  publicRuntimeConfig: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000/divine',
+  },
 }
