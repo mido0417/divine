@@ -15,10 +15,9 @@
             >
           </h2>
           <p class="description">{{ article.description }}</p>
-          <div class="info-wrap">
-            <!-- <p class="author">{{ article.author.name }}</p> -->
-            <p class="pos-time">{{ article.tax }}</p>
-            <p class="pos-time">{{ formatDate(article.createdAt) }}</p>
+          <div class="tax-wrap">
+            <p class="tax">{{ article.tax }}</p>
+            <p>{{ formatDate(article.createdAt) }}</p>
           </div>
           <NuxtLink
             :to="{ name: 'blog-slug', params: { slug: article.slug } }"
@@ -38,10 +37,10 @@
 
 
 <script>
-import Pagination from '@/components/Pagination';
+import Pagination from "@/components/Pagination";
 
 export default {
-  name: 'ArticleList',
+  name: "ArticleList",
   components: {
     Pagination,
   },
@@ -56,9 +55,17 @@ export default {
     },
   },
 
-async asyncData({ $content, params }) {
+  async asyncData({ $content, params }) {
     const articles = await $content("articles", params.slug)
-      .only(["title", "description", "img", "slug", "author", "createdAt", "tax"])
+      .only([
+        "title",
+        "description",
+        "img",
+        "slug",
+        "author",
+        "createdAt",
+        "tax",
+      ])
       .sortBy("createdAt", "desc")
       .fetch();
 
@@ -92,8 +99,9 @@ async asyncData({ $content, params }) {
   padding: 35px 0;
   border-bottom: 1px solid rgb(128 128 128 / 0.2);
   flex-direction: column;
-  
-
+  &:last-child {
+    border-bottom: 0px;
+  }
   @media (min-width: $md) {
     flex-direction: row;
   }
@@ -135,15 +143,21 @@ async asyncData({ $content, params }) {
       font-size: 24px;
     }
 
-    .info-wrap {
+    .tax-wrap {
       display: flex;
       align-items: center;
-      .author {
-        &::after {
-          content: "｜";
-          display: inline-block;
-          font-size: 10px;
-        }
+      opacity: 0.5;
+      .tax {
+        border-right: 1px solid #000;
+        padding-right: 5px;
+        margin-right: 5px;
+        // &::before {
+        //   content: "";
+        //   display: block;
+        //   width: 1px;
+        //   height: 10px;
+        //   background-color: #000;
+        // }
       }
     }
   }

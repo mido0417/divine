@@ -169,6 +169,7 @@ article {
     p,
     span,
     div {
+        color: rgba(0, 0, 0, 0.7);
         &::selection {
             background-color: rgb(187, 187, 187);
         }

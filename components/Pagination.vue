@@ -1,8 +1,7 @@
 <template>
-  <div class="grid gap-4 grid-cols-4">
+  <div class="pagination">
     <div v-if="currentPage === 1" :class="disabledStyle">
-      <span class="hidden sm:inline">First</span>
-      <!-- <SingleBack /> -->
+      <span class=""><<</span>
     </div>
 
     <nuxt-link
@@ -10,13 +9,11 @@
       :to="{ name: 'blog-page-page', params: { page: 1 } }"
       :class="buttonStyles"
     >
-      <!-- <DoubleBack /> -->
-      <span class="hidden sm:inline">First</span>
+      <span class=""><<</span>
     </nuxt-link>
 
-    <div v-if="currentPage === 1" :class="disabledStyle">
-      <span class="hidden sm:inline">Prev</span>
-      <!-- <SingleBack /> -->
+    <!-- <div v-if="currentPage === 1" :class="disabledStyle">
+      <span class="">上一頁</span>
     </div>
 
     <nuxt-link
@@ -24,13 +21,11 @@
       :to="{ name: 'blog-page-page', params: { page: prevPage } }"
       :class="buttonStyles"
     >
-      <!-- <SingleBack /> -->
-      <span class="hidden sm:inline">Prev</span>
-    </nuxt-link>
+      <span class="">上一頁</span>
+    </nuxt-link> -->
 
-    <div v-if="currentPage === totalPages" :class="disabledStyle">
-      <span class="hidden sm:inline">Next</span>
-      <!-- <SingleFwd /> -->
+    <!-- <div v-if="currentPage === totalPages" :class="disabledStyle">
+      <span class="">下一頁</span>
     </div>
 
     <nuxt-link
@@ -38,13 +33,20 @@
       :to="{ name: 'blog-page-page', params: { page: nextPage } }"
       :class="buttonStyles"
     >
-      <span class="hidden sm:inline">Next</span>
-      <!-- <SingleFwd /> -->
-    </nuxt-link>
+      <span class="">下一頁</span>
+    </nuxt-link> -->
+
+    <!-- 頁碼 -->
+    <nuxt-link
+      class="pager-item"
+      v-for="pager in totalPages"
+      :key="pager.key"
+      :to="{ name: 'blog-page-page', params: { page: pager } }"
+      >{{ pager }}</nuxt-link
+    >
 
     <div v-if="currentPage === totalPages" :class="disabledStyle">
-      <span class="hidden sm:inline">Last</span>
-      <!-- <DoubleFwd /> -->
+      <span class="">>></span>
     </div>
 
     <nuxt-link
@@ -52,26 +54,15 @@
       :to="{ name: 'blog-page-page', params: { page: totalPages } }"
       :class="buttonStyles"
     >
-      <span class="hidden sm:inline">Last</span>
-      <!-- <DoubleFwd /> -->
+      <span class="">>></span>
     </nuxt-link>
   </div>
 </template>
 
 <script>
-// // import DoubleFwd from '@/components/svg/DoubleFwd';
-// // import DoubleBack from '@/components/svg/DoubleBack';
-// // import SingleFwd from '@/components/svg/SingleFwd';
-// import SingleBack from '@/components/svg/SingleBack';
-
 export default {
-  name: 'Pagination',
-  components: {
-    // DoubleFwd,
-    // DoubleBack,
-    // SingleFwd,
-    // SingleBack,
-  },
+  name: "Pagination",
+  components: {},
   props: {
     total: {
       type: Number,
@@ -84,10 +75,10 @@ export default {
   },
   computed: {
     buttonStyles() {
-      return 'border rounded px-4 py-1 text-sm bg-white flex justify-center items-center sm:uppercase hover:bg-blue-500 hover:text-white transform duration-500 ease-in-out';
+      return "border rounded px-4 py-1 text-sm bg-white flex justify-center items-center sm:uppercase hover:bg-blue-500 hover:text-white transform duration-500 ease-in-out";
     },
     disabledStyle() {
-      return 'border rounded px-4 py-1 text-sm bg-white flex justify-center items-center sm:uppercase text-gray-300';
+      return "border rounded px-4 py-1 text-sm bg-white flex justify-center items-center sm:uppercase text-gray-300";
     },
     totalPages() {
       return Math.ceil(this.total / this.perPage);

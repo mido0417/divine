@@ -1,24 +1,22 @@
 <template>
-  <div>
-    <div id="blog">
+  <div id="blog">
     <Menu />
-    </div>
     <ArticleList :articles="paginatedArticles" :total="allArticles.length" />
   </div>
 </template>
 
 <script>
-import getContent from '@/utils/getContent';
-import ArticleList from '@/components/ArticleList';
+import getContent from "@/utils/getContent";
+import ArticleList from "@/components/ArticleList";
 import Menu from "@/components/menu/main-menu.vue";
 
 export default {
-  name: 'ArticleListPage',
+  name: "ArticleListPage",
   components: {
     ArticleList,
-    Menu
+    Menu,
   },
-  
+
   async asyncData({ $content, app, params, error }) {
     const content = await getContent($content, params, error);
     return {
@@ -28,11 +26,11 @@ export default {
   },
   head() {
     return {
-      title: `Articles Page ${this.$route.params.page} - Learning Laravel and VueJS`,
+      title: `Blog page${this.$route.params.page}|四月塔羅`,
       link: [
         {
-          hid: 'canonical',
-          rel: 'canonical',
+          hid: "canonical",
+          rel: "canonical",
           href: `${this.$config.baseUrl}/blog/page/${this.$route.params.page}`,
         },
       ],
