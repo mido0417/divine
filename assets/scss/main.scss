@@ -136,12 +136,26 @@ span {
 }
 
 .nuxt-content {
+    padding: 0 15px;
+    @media (min-width: $md) {
+    }
     p {
         margin-top: 1em;
         margin-bottom: 1em;
         margin-left: 0;
         margin-right: 0;
         line-height: 1.6;
+    }
+}
+
+.content-wrap {
+    margin: 0 auto;
+    padding: 0 15px 30px;
+    max-width: 100%;
+
+    @media (min-width: $md) {
+        max-width: 1100px;
+        padding: 0 0 100px;
     }
 }
 
@@ -210,5 +224,64 @@ article {
         margin-left: 0;
         margin-right: 0;
         font-weight: bold;
+    }
+}
+
+.addtoany-wrap {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 45vw;
+        height: 1.4px;
+        background-color: gray;
+    }
+    &::before {
+        margin-right: 10px;
+        @media (min-width: $md) {
+            margin-right: 30px;
+        }
+    }
+    &::after {
+        margin-left: 10px;
+        @media (min-width: $md) {
+            margin-left: 30px;
+        }
+    }
+    .a2a_dd {
+        display: none;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 3px;
+        > span {
+            background-color: gray !important;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            .a2a_s_twitter {
+                background-color: rgb(76, 123, 158) !important;
+            }
+
+            .a2a_s_plurk {
+                background-color: rgb(207, 104, 47) !important;
+            }
+
+            .a2a_s_line {
+                background-color: rgb(0, 195, 0) !important;
+            }
+            .a2a_s_facebook {
+                background-color: rgb(24, 119, 242) !important;
+            }
+        }
+    }
+
+    .a2a_svg {
+        border-radius: 50%;
     }
 }

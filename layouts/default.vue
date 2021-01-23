@@ -1,28 +1,30 @@
-<template>
-  <div>
-    <!-- <h1>四月塔羅|探索自我，發現內心的光芒</h1> -->
-    <Nuxt />
-  </div>
-</template>
+<template lang="pug">
+div
+  Nuxt
+  .footer
+    .wrap.copy
+      p Copyright © 2020 Mido. All rights reserved.
+</template>>
+
 
 <script>
 export default {};
 </script>
 
-<style>
-/* html {
-  font-family: "Noto Sans", sans-serif, "Source Sans Pro", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-} */
+<style lang="scss">
+.footer {
+  background-color: #000;
 
-/* h1 {
-  display: none;
-} */
-</style>
+  .wrap {
+    padding: 10px 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+}
+</style>>
+

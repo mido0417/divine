@@ -2,17 +2,22 @@
   <div>
     <Menu />
     <article class="content-wrap">
-      <h1>{{ article.title }}</h1>
-      <p>{{ formatDate(article.createdAt) }}</p>
       <div
         class="cover-img"
         :style="{ backgroundImage: 'url(' + article.img + ')' }"
       >
         <p class="alt">{{ article.alt }}</p>
       </div>
+      <div class="title-wrap">
+        <h1 class="page-title">{{ article.title }}</h1>
+        <div class="tax-wrap">
+          <p class="tax">{{ article.tax }}</p>
+          <p>{{ formatDate(article.createdAt) }}</p>
+        </div>
+      </div>
       <nuxt-content :document="article" />
       <!-- AddToAny BEGIN -->
-      <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+      <div class="addtoany-wrap a2a_kit a2a_kit_size_32">
         <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
         <a class="a2a_button_facebook"></a>
         <a class="a2a_button_line"></a>
@@ -70,19 +75,19 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: "https://images.unsplash.com/photo-1494797262163-102fae527c62?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80",
+          content:
+            "https://images.unsplash.com/photo-1494797262163-102fae527c62?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80",
         },
         {
-          hid: "canonical"
-
-        }
+          hid: "canonical",
+        },
       ],
       link: [
         {
           rel: "canonical",
           href: `https://hellomido.space/divine/${this.$route.params.slug}`,
-        }
-      ]
+        },
+      ],
     };
   },
 
@@ -159,16 +164,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content-wrap {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 100%;
 
-  @media (min-width: $md) {
-    max-width: 1100px;
-    padding: 0;
-  }
-}
 
 .cover-img {
   background-size: 100%;
@@ -187,11 +183,54 @@ export default {
   }
   .alt {
     position: absolute;
-    top:102%;
+    top: 102%;
     left: 0;
     right: 0;
     text-align: center;
-    opacity: .3;
+    opacity: 0.3;
   }
+}
+
+.title-wrap {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid gray;
+  @media (min-width: $md) {
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.page-title{
+  margin-bottom: 10px;
+  @media (min-width: $md) {
+    margin-bottom: 15px;
+  }
+}
+
+.tax-wrap {
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+  .tax {
+    border-right: 1px solid #000;
+    padding-right: 5px;
+    margin-right: 5px;
+    // &::before {
+    //   content: "";
+    //   display: block;
+    //   width: 1px;
+    //   height: 10px;
+    //   background-color: #000;
+    // }
+  }
+}
+
+.addtoany-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
