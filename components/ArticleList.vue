@@ -29,7 +29,7 @@
         <!-- <pre>{{ article }}</pre> -->
       </li>
     </ul>
-    <div v-if="total" class="constainer mx-auto my-5 max-w-5xl">
+    <div class="pagination-wrap" v-if="total">
       <Pagination v-if="total > 5" :total="total" />
     </div>
   </div>
@@ -94,14 +94,19 @@ export default {
   }
 }
 
+.pagination-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0 ;
+}
+
 .blog-item {
   display: flex;
   padding: 35px 0;
   border-bottom: 1px solid rgb(128 128 128 / 0.2);
   flex-direction: column;
-  &:last-child {
-    border-bottom: 0px;
-  }
+  
   @media (min-width: $md) {
     flex-direction: row;
   }
@@ -128,6 +133,10 @@ export default {
   .item-wrap {
     width: 100%;
     position: relative;
+    margin-top:5px;
+    @media (min-width: $md){
+      margin-top:0px;
+    }
     > div,
     > p,
     > h2 {
