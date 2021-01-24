@@ -70,60 +70,22 @@ export default {
         {
           hid: "og:url",
           property: "og:url",
-          content: `https://hellomido.space/divine/${this.$route.params.slug}`,
+          href: `${this.$config.baseUrl}/blog/${this.$route.params.page}`,
         },
         {
           hid: "og:image",
           property: "og:image",
-          content:
-            "https://images.unsplash.com/photo-1494797262163-102fae527c62?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80",
-        },
-        {
-          hid: "canonical",
+          content:`${this.article.img}`
         },
       ],
       link: [
         {
           rel: "canonical",
-          href: `https://hellomido.space/divine/${this.$route.params.slug}`,
+          href: `${this.$config.baseUrl}/blog/${this.$route.params.page}`,
         },
       ],
     };
   },
-
-  // head: {
-  //   title: "四月塔羅 | 探索自我，發現內心的光芒",
-  //   meta: [
-  //     { charset: "utf-8" },
-  //     { name: "viewport", content: "width=device-width, initial-scale=1" },
-  //     {
-  //       hid: "description",
-  //       name: "description",
-  //       content: "探索自我，發現內心的光芒",
-  //     },
-  //     {
-  //       hid: "og:title",
-  //       property: "og:title",
-  //       content: "四月塔羅 | 探索自我，發現內心的光芒",
-  //     },
-  //     {
-  //       hid: "og:description",
-  //       property: "og:description",
-  //       content: "探索自我，發現內心的光芒",
-  //     },
-  //     {
-  //       hid: "og:url",
-  //       property: "og:url",
-  //       content: "https://hellomido.space/divine/",
-  //     },
-  //     {
-  //       hid: "og:image",
-  //       property: "og:image",
-  //       content: "https://images.unsplash.com/photo-1494797262163-102fae527c62?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80",
-  //     },
-  //     { hid: "og:type", property: "og:type", content: "website" },
-  //   ],
-  // },
 
   async asyncData({ $content, params, error }) {
     try {
