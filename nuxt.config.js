@@ -2,6 +2,7 @@ const webpack = require('webpack')
 
 export default {
 
+  target:'static',
   // router: {
   //   base: '/divine/'
   // },
