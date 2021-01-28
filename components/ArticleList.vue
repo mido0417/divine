@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="content-wrap">
+    <ul class="">
       <li class="blog-item" v-for="article of articles" :key="article.slug">
         <div
           class="cover-img"

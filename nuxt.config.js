@@ -80,6 +80,7 @@ export default {
   modules: [
     '@nuxt/content',
     '@nuxtjs/style-resources',
+    
   ],
   styleResources: {
     scss: [

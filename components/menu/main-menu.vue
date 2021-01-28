@@ -15,7 +15,37 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    $(document).ready(function (e) {
+      var xPos = 0;
+      var yPos = 0;
+      var lastScrolled = 0;
+
+      var menu_scroll_top1 = $(".menu-wrap nav").offset().top;
+      check_main_menu();
+
+      $(window).scroll(function (e) {
+        check_main_menu();
+      });
+
+
+      function check_main_menu() {
+        var wt = $(window).scrollTop();
+        var menu_scroll_top2 = $(".menu-wrap nav").offset().top;
+
+        if (wt >= menu_scroll_top2) {
+          $(".menu-wrap nav").addClass("fix");
+          // console.log('wt >= menu_scroll_top2')
+        }
+
+        if (wt < menu_scroll_top1) {
+          $(".menu-wrap nav").removeClass("fix");
+        }
+      }
+    });
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -28,12 +58,16 @@ export default {};
   background-color: rgba(0, 0, 0);
 
   .menu {
+    transition: padding .3s;
     &.fix {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       box-shadow: 0px 0px 10px 0px rgb(255 255 255 / 0.35);
+      background-color: rgba(0, 0, 0);
+      z-index: 10;
+      padding: 10px 0;
     }
 
     ul {
@@ -81,7 +115,7 @@ export default {};
       left: 45px;
       top: 45px;
       opacity: 0;
-      transition: .3s;
+      transition: 0.3s;
     }
 
     &:hover {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="blog">
     <Menu />
     <article class="content-wrap">
       <div
@@ -75,7 +75,7 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content:`${this.article.img}`
+          content: `${this.article.img}`,
         },
       ],
       link: [
@@ -126,7 +126,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+#blog {
+  position: relative;
+  &::after {
+    content: "img by Gluc/Glucose";
+    color: transparent;
+    // display: none;
+    display: block;
+    background-image: url("https://images.plurk.com/7LDiuk04syO93v7UQpDU23.png");
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: 50px 20px;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+    // background-color: #000;
+    @media (min-width: $md) {
+      opacity: 0.5;
+    }
+  }
+}
 
 .cover-img {
   background-size: 100%;
@@ -165,7 +189,7 @@ export default {
   }
 }
 
-.page-title{
+.page-title {
   margin-bottom: 10px;
   @media (min-width: $md) {
     margin-bottom: 15px;
@@ -194,5 +218,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 </style>

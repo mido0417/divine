@@ -1,7 +1,7 @@
 <template>
   <div id="blog">
     <Menu />
-    <ArticleList :articles="paginatedArticles" :total="allArticles.length" />
+    <ArticleList :articles="paginatedArticles" :total="allArticles.length" class="content-wrap" />
   </div>
 </template>
 
