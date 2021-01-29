@@ -2,7 +2,7 @@ const webpack = require('webpack')
 
 export default {
 
-  target:'static',
+  // target:'static',
   // router: {
   //   base: '/divine/'
   // },
@@ -97,7 +97,7 @@ export default {
       })
     ]
   },
-  publicRuntimeConfig: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-  },
+  // publicRuntimeConfig: {
+  //   baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+  // },
 }
