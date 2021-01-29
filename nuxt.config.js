@@ -20,7 +20,7 @@ export default {
       { hid: 'og:locale', property: 'og:locale', content:'zh-TW'},
       { hid: 'og:title', property: 'og:title', content: '四月塔羅 | 探索自我，發現內心的光芒' },
       { hid: 'og:description', property: 'og:description', content: '探索自我，發現內心的光芒' },
-      { hid: 'og:url', property: 'og:url', content: 'https://my-divine-website.herokuapp.com' },
+      { hid: 'og:url', property: 'og:url', content: 'http://www.life-song.space' },
       { hid: 'og:image', property: 'og:image', content: 'https://images.unsplash.com/photo-1494797262163-102fae527c62?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
     ],
@@ -40,7 +40,7 @@ export default {
       },
       {
         rel: "canonical",
-        href: 'https://my-divine-website.herokuapp.com',
+        href: 'http://www.life-song.space',
       }
     ],
     script: [
