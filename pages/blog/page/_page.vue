@@ -27,11 +27,33 @@ export default {
   head() {
     return {
       title: `Blog page${this.$route.params.page}|四月塔羅`,
+       meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "從這裡可以瞭解，我是怎麼看待這個世界",
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content:  `Blog page${this.$route.params.page}|四月塔羅`,
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: "從這裡可以瞭解，我是怎麼看待這個世界",
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          href: `${this.$route.params.slug}`,
+        },
+      ],
       link: [
         {
           hid: "canonical",
           rel: "canonical",
-          href: `${this.$config.baseUrl}/blog/page/${this.$route.params.page}`,
+          href: `${this.$route.params.page}`,
         },
       ],
     };

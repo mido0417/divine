@@ -65,7 +65,7 @@ export default {
         {
           hid: "og:url",
           property: "og:url",
-          href: `${this.$config.baseUrl}blog/${this.$route.params.slug}`,
+          href: `${this.$route.params.slug}`,
         },
         {
           hid: "og:image",
@@ -76,7 +76,7 @@ export default {
       link: [
         {
           rel: "canonical",
-          href: `${this.$config.baseUrl}/blog/${this.$route.params.slug}`,
+          href: `${this.$route.params.slug}`,
         },
       ],
     };
@@ -113,7 +113,7 @@ export default {
 
   mounted() {
     $(document).ready(function (e) {
-     
+    //  console.log(this.$route)
     });
   },
 };
