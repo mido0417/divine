@@ -26,11 +26,6 @@
       </div>
       <script async src="https://static.addtoany.com/menu/page.js"></script>
       <!-- AddToAny END -->
-      <!-- <div
-        class="likecoin-embed likecoin-button"
-        data-liker-id="mido0417"
-      ></div>
-      <script src="https://static.like.co/sdk/v1/button.js"></script> -->
       <!-- <author :author="article.author" /> -->
 
       <prev-next :prev="prev" :next="next" />
@@ -118,8 +113,7 @@ export default {
 
   mounted() {
     $(document).ready(function (e) {
-      let baseUrl = window.location.href;
-      $(".likecoin-button").attr("data-href", baseUrl);
+     
     });
   },
 };
