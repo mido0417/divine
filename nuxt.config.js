@@ -3,9 +3,9 @@ const webpack = require('webpack')
 export default {
 
   // target:'static',
-  // router: {
-  //   base: '/divine/'
-  // },
+  router: {
+    base: '/divine/'
+  },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
