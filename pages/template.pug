@@ -5,14 +5,30 @@
     .banner
         .wrap
             .text-wrap
-                p.animate__animated.animate__fadeInLeft.animate__slow 探索自我
-                p.animate__animated.animate__fadeIn.animate__slow.animate__delay-1s.separate ◊
-                p.animate__animated.animate__fadeInRight.animate__slow.animate__delay-2s 發現內心的光芒
+                p.wow.animate__animated.animate__fadeInLeft.animate__slow 探索自我
+                p.wow.animate__animated.animate__fadeIn.animate__slow.separate(data-wow-delay="1s") ◊
+                p.wow.animate__animated.animate__fadeInRight.animate__slow(data-wow-delay="2s") 發現內心的光芒
     Menu
-    .main
-        .intro
-            .wrap
-        .service
-            .wrap
-        .contact
-            .wrap
+    .container
+        .content-wrap
+            .story
+                .wrap.story01
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 你⋯⋯
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 是否在人生的旅途中感到迷惘呢？
+                .wrap.story02
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 你⋯⋯
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 是否感到內心徬徨，想找人訴說卻擔心沒有人理解呢？
+            .intro
+                .photo.wow.animate__animated.animate__zoomIn(data-wow-offset="30")
+                .wrap
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") Claire
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 雷諾曼/塔羅/精油調香
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 1994年生於嘉義
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 喜歡聽故事，
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 擅長使用雷諾曼與塔羅
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 能藉由牌卡來釐清當前課題與未來發展
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 透過聊天、對話給陷入迷惘的朋友溫暖與前行方向
+            .service
+                Service001(:services="item" v-for="item of services" :key="services.index")
+            .contact
+                .wrap

@@ -17,7 +17,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '探索自我，發現內心的光芒' },
-      { hid: 'og:locale', property: 'og:locale', content:'zh-TW'},
+      { hid: 'og:locale', property: 'og:locale', content: 'zh-TW' },
       { hid: 'og:title', property: 'og:title', content: '四月塔羅 | 探索自我，發現內心的光芒' },
       { hid: 'og:description', property: 'og:description', content: '探索自我，發現內心的光芒' },
       { hid: 'og:url', property: 'og:url', content: 'http://www.life-song.space' },
@@ -48,6 +48,9 @@ export default {
         src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
       }, {
         src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js',
+      },
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js',
       },
       // {
       //   hid:"tawk.to",
@@ -80,7 +83,7 @@ export default {
   modules: [
     '@nuxt/content',
     '@nuxtjs/style-resources',
-    
+
   ],
   styleResources: {
     scss: [

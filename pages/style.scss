@@ -3,6 +3,10 @@ body {
   position: relative;
 }
 
+#index {
+  overflow: hidden;
+}
+
 #mousefollow {
   pointer-events: none;
   width: 30px;
@@ -30,6 +34,7 @@ body {
   height: 100vh;
   background-color: #000;
   background-image: url("../assets/image/banner.jpeg");
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,14 +93,46 @@ body {
   }
 }
 
-.main {
+.container {
   background-color: #000;
-  height: 3000px;
+  padding: 150px 0 0;
+  p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 1em;
+    // margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    // line-height: 1.6;
+  }
+
+  .content-wrap > div {
+    padding: 100px 0;
+  }
+
+  .intro {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .photo {
+      width: 200px;
+      height: 200px;
+      background-image: url("~assets/image/avatar.png");
+      background-position: center;
+      background-size: 100%;
+      border-radius: 10px;
+      margin-right: 30px;
+    }
+    .wrap {
+    }
+  }
+  .service {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 }
 
-
-
-@media screen and (min-width: 768px) {
+@media (min-width: $md) {
   .banner .wrap .text-wrap p {
     font-size: 3rem;
 

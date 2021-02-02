@@ -10,6 +10,9 @@ div
 <script>
 export default {
  
+ mounted() {
+   new WOW().init();
+ },
 
 };
 </script>
@@ -25,7 +28,7 @@ export default {
   p {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.35);
     text-align: center;
   }
 }
