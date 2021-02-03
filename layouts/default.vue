@@ -3,7 +3,7 @@ div
   Nuxt
   .footer
     .wrap.copy
-      p Copyright © 2020 Mido. All rights reserved.
+      p Copyright © 2021 Mido. All rights reserved.
 </template>>
 
 
@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss">
 .footer {
-  background-color: #000;
+  background-color: #fff;
 
   .wrap {
     padding: 10px 0;
@@ -28,7 +28,7 @@ export default {
   p {
     margin: 0;
     padding: 0;
-    color: rgba(255, 255, 255, 0.35);
+    color: #000;
     text-align: center;
   }
 }
