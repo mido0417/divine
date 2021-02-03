@@ -26,7 +26,7 @@ export default {
   },
   head() {
     return {
-      title: `Blog page${this.$route.params.page}|四月塔羅`,
+      title: `Blog page${this.$route.params.page}|生命之歌`,
        meta: [
         {
           hid: "description",
@@ -36,7 +36,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content:  `Blog page${this.$route.params.page}|四月塔羅`,
+          content:  `Blog page${this.$route.params.page}|生命之歌`,
         },
         {
           hid: "og:description",

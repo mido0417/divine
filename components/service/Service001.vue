@@ -1,13 +1,19 @@
 <template>
   <div class="sv-card" :class="{ lock: !services.ready }">
-    <div class="photo"></div>
-    <div class="title-wrap">
-      <h3 class="name">{{ services.name }}</h3>
-      <h3 v-if="services.subtitle" class="subtitle">{{ services.subtitle }}</h3>
+    <div class="wrap">
+      <div class="photo"></div>
+      <div class="title-wrap">
+        <h3 class="name">{{ services.name }}</h3>
+        <h3 v-if="services.subtitle" class="subtitle">
+          {{ services.subtitle }}
+        </h3>
+      </div>
+      <p class="separate">◊</p>
+      <p class="intro">{{ services.intro }}</p>
+      <div class="link">
+        <nuxt-link :to="services.link">了解更多</nuxt-link>
+      </div>
     </div>
-    <p class="separate">◊</p>
-    <p class="intro">{{ services.intro }}</p>
-    <div class="link"><nuxt-link :to="services.link">了解更多</nuxt-link></div>
   </div>
 </template>
 
@@ -19,19 +25,24 @@ export default {
 
 <style lang="scss" scoped>
 .sv-card {
+  transition: all 0.3s;
   position: relative;
-  flex-basis: 20%;
-  max-width: 20%;
-  //   text-align: center;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  flex-basis: 100%;
+  max-width: 100%;
+  opacity: 0.3;
   border-radius: 10px;
-  min-height: 400px;
-  //   margin: 0 10px;
-  padding: 20px;
+  
+  @media (min-width: $md) {
+    flex-basis: 50%;
+    max-width: 50%;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  @media (min-width: $lg) {
+    flex-basis: 20%;
+    max-width: 20%;
+  }
 
   &.lock {
     &::after {
@@ -52,21 +63,37 @@ export default {
       content: "";
       background: #000;
       position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
+      left: 1px;
+      right: 1px;
+      top: 1px;
+      bottom: 1px;
       z-index: 1;
       opacity: 0.9;
       backdrop-filter: blur(5px);
     }
   }
 
+  &:hover:not(.lock) {
+    opacity: 1;
+  }
+
+  > .wrap {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 400px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+  }
+
   p,
   h3,
   a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
   }
   .photo {
     width: 150px;
@@ -80,6 +107,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
     h3 {
       font-size: 1.2rem;
       line-height: 1;
@@ -105,19 +133,25 @@ export default {
     &::after {
       content: "";
       display: block;
-      width: 40%;
+      width: 20%;
       height: 2px;
       background-color: #fff;
       margin-left: 10px;
+      @media (min-width: $lg) {
+        width: 40%;
+      }
     }
 
     &::before {
       content: "";
       display: block;
-      width: 40%;
+      width: 20%;
       height: 2px;
       background-color: #fff;
       margin-right: 10px;
+      @media (min-width: $lg) {
+        width: 40%;
+      }
     }
   }
 }

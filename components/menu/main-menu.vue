@@ -91,6 +91,10 @@ export default {
           &:hover {
             color: #fff;
           }
+          &.nuxt-link-active{
+            color: #fff;
+            text-decoration: dotted;
+          }
         }
       }
     }
