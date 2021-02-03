@@ -11,6 +11,7 @@ export default {
         return {
             services: [
                 {
+                    img: "https://images.plurk.com/1vrFF9X9qwBTWzjfQBo0cI.jpg",
                     name: "雷諾曼預言占卜",
                     subtitle: "",
                     intro: "",
@@ -18,6 +19,7 @@ export default {
                     ready: false,
                 },
                 {
+                    img: "https://images.plurk.com/4TEroQSzmsn7XQKN1CZNp3.jpg",
                     name: "塔羅占卜",
                     subtitle: "",
                     intro: "",
@@ -25,6 +27,7 @@ export default {
                     ready: false,
                 },
                 {
+                    img: "https://images.plurk.com/3PCXKJ7RTDDvw0mdlw4Ehk.jpg",
                     name: "靈魂記憶",
                     subtitle: "前世回朔引導觀想",
                     intro: "藉由引導冥想帶你進入前世記憶中，探尋靈魂深處那顆深埋已久的因",
@@ -32,6 +35,7 @@ export default {
                     ready: true,
                 },
                 {
+                    img: "",
                     name: "精油調香",
                     subtitle: "",
                     intro: "精油不僅可以增添居家情趣，除了製在香氛蠟燭與按摩油之外不同精油的搭配組合也能蹦出不一樣的火花產生不一樣的效用。",

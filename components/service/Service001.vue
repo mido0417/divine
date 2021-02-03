@@ -1,7 +1,8 @@
 <template>
   <div class="sv-card" :class="{ lock: !services.ready }">
+  <!-- <div class="sv-card"> -->
     <div class="wrap">
-      <div class="photo"></div>
+      <div class="photo"><img v-if="services.img" :src="services.img" /></div>
       <div class="title-wrap">
         <h3 class="name">{{ services.name }}</h3>
         <h3 v-if="services.subtitle" class="subtitle">
@@ -31,7 +32,7 @@ export default {
   max-width: 100%;
   opacity: 0.3;
   border-radius: 10px;
-  
+
   @media (min-width: $md) {
     flex-basis: 50%;
     max-width: 50%;
@@ -40,8 +41,8 @@ export default {
   }
 
   @media (min-width: $lg) {
-    flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 25%;
+    max-width: 25%;
   }
 
   &.lock {
@@ -98,8 +99,16 @@ export default {
   .photo {
     width: 150px;
     height: 150px;
-    background-color: papayawhip;
     margin: 0 auto 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      display: block;
+      width: 150px;
+      height: 150px;
+    }
   }
   .title-wrap {
     min-height: 40px;
@@ -115,11 +124,21 @@ export default {
   }
   .link {
     position: absolute;
-    bottom: 20px;
+    bottom: 33px;
     left: 0;
     right: 0;
     margin: 0 auto;
     text-align: center;
+    a {
+      border: 1px solid #fff;
+      border-radius: 5px;
+      padding: 5px 10px;
+      transition: all .3s;
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
   }
 
   .separate {

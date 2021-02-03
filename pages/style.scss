@@ -119,17 +119,23 @@ body {
       justify-content: space-between;
       flex-direction: row;
     }
-    .photo {
+
+    > div {
       @media (min-width: $lg) {
-        margin-right: 30px;
+        flex-basis: 50%;
+        max-width: 50%;
       }
+    }
+
+    .photo {
       img {
         display: block;
         width: 100%;
         height: auto;
         border-radius: 10px;
-        @media (min-width: $md) {
-          width: 200px;
+        margin: 0 auto;
+        @media (min-width: $lg) {
+          width: 500px;
         }
       }
     }
