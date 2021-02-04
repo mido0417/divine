@@ -1,6 +1,5 @@
 <template>
-  <div id="blog">
-    <Menu />
+  <div>
     <article class="content-wrap">
       <div
         class="cover-img"
@@ -36,11 +35,11 @@
 
 
 <script>
-import Menu from "@/components/menu/main-menu.vue";
 
 export default {
+  layout: "blog-layout",
   components: {
-    Menu,
+    
   },
 
   head() {
@@ -113,7 +112,7 @@ export default {
 
   mounted() {
     $(document).ready(function (e) {
-    //  console.log(this.$route)
+      //  console.log(this.$route)
     });
   },
 };

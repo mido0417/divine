@@ -9,9 +9,9 @@
       li
         nuxt-link(to="/blog") BLOG
       li
-        a(href="#") CONTACT
+        a(href="#") service
       li
-        a(href="https://open.firstory.me/user/life-circle/platforms") PODCAST
+        a(href="https://open.firstory.me/user/flower-of-ones/platforms") PODCAST
 </template>
 
 <script>
@@ -83,6 +83,7 @@ export default {
 
         a {
           text-decoration: none;
+          text-transform:uppercase;
           color: rgb(255 255 255 / 0.35);
           padding: 10px 0;
           display: block;
@@ -91,9 +92,8 @@ export default {
           &:hover {
             color: #fff;
           }
-          &.nuxt-link-active{
+          &.nuxt-link-exact-active{
             color: #fff;
-            text-decoration: dotted;
           }
         }
       }

@@ -1,10 +1,8 @@
 <template lang="pug">
-div
+div#index
   Nuxt
-  .footer
-    .wrap.copy
-      p Copyright © 2021 Mido. All rights reserved.
-</template>>
+  Footer001
+</template>
 
 
 <script>
@@ -20,17 +18,6 @@ export default {
 <style lang="scss">
 .footer {
   background-color: #fff;
-
-  .wrap {
-    padding: 10px 0;
-  }
-
-  p {
-    margin: 0;
-    padding: 0;
-    color: #000;
-    text-align: center;
-  }
 }
 </style>>
 

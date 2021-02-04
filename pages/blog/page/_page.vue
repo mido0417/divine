@@ -1,20 +1,23 @@
 <template>
-  <div id="blog">
-    <Menu />
-    <ArticleList :articles="paginatedArticles" :total="allArticles.length" class="content-wrap" />
+  <div>
+    <ArticleList
+      :articles="paginatedArticles"
+      :total="allArticles.length"
+      class="content-wrap"
+    />
   </div>
 </template>
 
 <script>
 import getContent from "@/utils/getContent";
 import ArticleList from "@/components/ArticleList";
-import Menu from "@/components/menu/main-menu.vue";
 
 export default {
   name: "ArticleListPage",
+
+  layout: "blog-layout",
   components: {
     ArticleList,
-    Menu,
   },
 
   async asyncData({ $content, app, params, error }) {
@@ -27,7 +30,7 @@ export default {
   head() {
     return {
       title: `Blog page${this.$route.params.page}|生命之歌`,
-       meta: [
+      meta: [
         {
           hid: "description",
           name: "description",
@@ -36,7 +39,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content:  `Blog page${this.$route.params.page}|生命之歌`,
+          content: `Blog page${this.$route.params.page}|生命之歌`,
         },
         {
           hid: "og:description",
