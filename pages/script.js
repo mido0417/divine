@@ -11,7 +11,7 @@ export default {
         return {
             services: [
                 {
-                    img: "https://images.plurk.com/1vrFF9X9qwBTWzjfQBo0cI.jpg",
+                    img: "https://images.plurk.com/7hw7PmP7Ngi1qefGSJ8B8p.jpg",
                     name: "故事劇情推演",
                     subtitle: "雷諾曼預言占卜",
                     intro: "利用雷諾曼強大的劇情推演能力，來推測所問之事的未來發展與走向。",
@@ -19,7 +19,7 @@ export default {
                     ready: false,
                 },
                 {
-                    img: "https://images.plurk.com/4TEroQSzmsn7XQKN1CZNp3.jpg",
+                    img: "https://images.plurk.com/23D7aevqpn60L9PVLFnF5w.jpg",
                     name: "探索自我",
                     subtitle: "塔羅占卜",
                     intro: "受過往經驗束縛而失去前進的勇氣，想探索靈魂深處真實的自己，讓塔羅牌來輔佐你看到不一樣的自己",
