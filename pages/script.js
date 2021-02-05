@@ -86,7 +86,7 @@ export default {
                 var star02 = $(".story-wrap .star").offset().top;
                 var starStart = star01 - 500;
 
-                console.log('scrollBottom:' + scrollBottom)
+                // console.log('scrollBottom:' + scrollBottom)
 
 
                 if (wt >= starStart) {
