@@ -165,14 +165,38 @@ body {
     background-color: gray;
     height: 800px;
     padding: 0;
+    display: flex;
+    justify-content: center;
     .star-path {
       position: relative;
+      background-color: brown;
+      width: 1px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .star {
+      transition: all 0s;
       font-size: 34px;
       color: #fff;
-     
+      position: absolute;
+      top: 0;
+      transform: rotate(0);
+      z-index: 3;
+    }
+    .text-box {
+      display: none;
+      position: absolute;
+      top: 0;
+      width: 200px;
+    }
+    .story01 {
+      left: 0;
+    }
+    .story02 {
+      right: 0;
     }
   }
 }

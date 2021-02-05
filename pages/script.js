@@ -65,20 +65,57 @@ export default {
             var yPos = 0;
             var lastScrolled = 0;
 
+            var star01 = $(".story-wrap .star").offset().top;
+
+            // console.log('star01:' + star01);
+            check_star()
             $(window).scroll(function (e) {
+                check_star()
 
-                var Y = $('#mousefollow').scrollTop();
-                var test = $('#mousefollow').css('top');
-                var num = test
 
-                $('#mousefollow').css({ "left": e.pageX + -10, "top": e.pageY + -10 });
+                // var Y = $('#mousefollow').scrollTop();
+                // var test = $('#mousefollow').css('top');
+                // var num = test
+
+                // $('#mousefollow').css({ "left": e.pageX + -10, "top": e.pageY + -10 });
             })
 
-            $('#mousefollow').css({ "left": e.pageX + -10, "top": e.pageY + -10 });
+            function check_star() {
+                var wt = $(window).scrollTop();
+                var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+                var star02 = $(".story-wrap .star").offset().top;
+                var starStart = star01 - 500;
 
-            $(document).mousemove(function (e) {
-                $('#mousefollow').css({ "left": e.pageX + -10, "top": e.pageY + -10 });
-            });
+                console.log('scrollBottom:' + scrollBottom)
+
+
+                if (wt >= starStart) {
+                    // console.log('is-wt:' + wt)
+                    var fixTop = Math.floor(wt / 10)
+                    var rotaNum = Math.floor(wt / 2)
+
+                    // $(".story-wrap .star").css({ 'transform': 'rotate(' + wt + 'deg)', 'top': wt + 'px', 'position': 'fixed' });
+
+                    // $(".story-wrap .star").css({ 'transform': 'rotate(' + wt + 'deg)' });
+                    // console.log('wt >= star02')
+                    if (wt >= star01) {
+                        $(".story-wrap .star").css({ 'transform': 'rotate(' + rotaNum + 'deg)', 'top': fixTop + 'px', 'position': 'fixed' });
+                    } else { $(".story-wrap .star").css({ 'transform': 'rotate(' + rotaNum + 'deg)', 'top': '0px', 'position': 'absolute' }); }
+                } else {
+                    $(".story-wrap .star").removeAttr('style');
+                }
+
+                // if (wt < star02) {
+
+                // }
+            }
+
+
+            // $('#mousefollow').css({ "left": e.pageX + -10, "top": e.pageY + -10 });
+
+            // $(document).mousemove(function (e) {
+            //     $('#mousefollow').css({ "left": e.pageX + -10, "top": e.pageY + -10 });
+            // });
         });
     },
 };
