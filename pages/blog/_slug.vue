@@ -83,9 +83,9 @@ export default {
 
   async asyncData({ $content, params, error }) {
     try {
-      const article = await $content("articles", params.slug).fetch();
+      const article = await $content("blog", params.slug).fetch();
 
-      const [prev, next] = await $content("articles")
+      const [prev, next] = await $content("blog")
         .only(["title", "slug"])
         .sortBy("createdAt", "desc")
         .surround(params.slug)

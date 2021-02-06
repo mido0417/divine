@@ -3,7 +3,7 @@ export default async ($content, params, error) => {
   
     const perPage = 5;
   
-    const allArticles = await $content('articles').fetch();
+    const allArticles = await $content('blog').fetch();
   
     const totalArticles = allArticles.length;
   
@@ -24,7 +24,7 @@ export default async ($content, params, error) => {
     };
   
     
-    const paginatedArticles = await $content('articles')
+    const paginatedArticles = await $content('blog')
     .only(["title", "description", "img", "slug", "author", "createdAt", "tax"])
     .sortBy("createdAt", "desc")
       .limit(perPage)
