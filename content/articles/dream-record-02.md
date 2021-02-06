@@ -2,7 +2,7 @@
 title: 夢境紀錄02：德古拉的眷屬
 description: 窗外有好幾顆眼睛跟小惡魔在盯著看嚇的我趕緊把孩子們拉離開窗邊，迅速的把窗簾拉上。過沒多久就出現一名吸血鬼震破了房間的窗戶⋯⋯
 img: https://images.unsplash.com/photo-1532767153582-b1a0e5145009?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2134&q=80
-alt: Photo by Krystal Ng on Unsplash
+alt: Photo by Altınay Dinç on Unsplash
 tax: 夢境紀錄
 createdAt: 2021-02-06
 author:
