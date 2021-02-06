@@ -5,7 +5,7 @@ let now = new Date();
 
 export default {
 
-  target:'static',
+  // target:'static',
   // router: {
   //   base: '/divine/'
   // },
