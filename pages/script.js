@@ -60,14 +60,7 @@ export default {
         })
 
         $(document).ready(function (e) {
-
-            var xPos = 0;
-            var yPos = 0;
-            var lastScrolled = 0;
-
             var star01 = $(".story-wrap .star").offset().top;
-
-            // console.log('star01:' + star01);
             check_star()
             $(window).scroll(function (e) {
                 check_star()
@@ -82,32 +75,37 @@ export default {
 
             function check_star() {
                 var wt = $(window).scrollTop();
-                var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+                var wh = $(window).height();
+
                 var star02 = $(".story-wrap .star").offset().top;
                 var starStart = star01 - 500;
 
-                // console.log('scrollBottom:' + scrollBottom)
+                var fixTop = Math.floor(wt / 10)
+                var rotaNum = Math.floor(wt / 2)
 
+                var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+                var starBottom = wh - ($('.story-wrap .star').height() + $('.story-wrap .star').offset().top - $(document).scrollTop());
+                var footerHight = $('.footer').height() * 2;
 
-                if (wt >= starStart) {
-                    // console.log('is-wt:' + wt)
-                    var fixTop = Math.floor(wt / 10)
-                    var rotaNum = Math.floor(wt / 2)
+                if (scrollBottom == 0) {
+                    var bottomFixTop = fixTop + starBottom - footerHight;
+                    var bottomRotaNum = rotaNum + 150;
 
-                    // $(".story-wrap .star").css({ 'transform': 'rotate(' + wt + 'deg)', 'top': wt + 'px', 'position': 'fixed' });
-
-                    // $(".story-wrap .star").css({ 'transform': 'rotate(' + wt + 'deg)' });
-                    // console.log('wt >= star02')
+                    // $(".story-wrap .star").css({ 'transform': 'rotate(0deg)', 'top': 'auto', 'bottom': footer_hight + 'px', 'position': 'flexed' });
+                    $(".story-wrap .star").css({ 'transform': 'rotate(' + bottomRotaNum + 'deg)', 'top': bottomFixTop + 'px', 'position': 'flexed', 'opacity': '1' });
+                    $(".story-wrap .star").addClass('star-anime');
+                } else if (wt >= starStart) {
+                    $(".story-wrap .star").removeClass('star-anime');
                     if (wt >= star01) {
-                        $(".story-wrap .star").css({ 'transform': 'rotate(' + rotaNum + 'deg)', 'top': fixTop + 'px', 'position': 'fixed' });
-                    } else { $(".story-wrap .star").css({ 'transform': 'rotate(' + rotaNum + 'deg)', 'top': '0px', 'position': 'absolute' }); }
+                        $(".story-wrap .star").css({ 'transform': 'rotate(' + rotaNum + 'deg)', 'top': fixTop + 'px', 'position': 'fixed', 'opacity': '.5' });
+                    } else {
+                        $(".story-wrap .star").css({ 'transform': 'rotate(' + rotaNum + 'deg)', 'top': '0px', 'position': 'absolute' });
+                    }
+
                 } else {
                     $(".story-wrap .star").removeAttr('style');
+                    
                 }
-
-                // if (wt < star02) {
-
-                // }
             }
 
 

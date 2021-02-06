@@ -1,5 +1,5 @@
 <template lang="pug">
-div#index
+#index
   Nuxt
   Footer001
 </template>
@@ -7,17 +7,18 @@ div#index
 
 <script>
 export default {
- 
- mounted() {
-   new WOW().init();
- },
-
+  mounted() {
+    new WOW().init();
+  },
 };
 </script>
 
 <style lang="scss">
-.footer {
-  background-color: #fff;
+#index .footer {
+  background-color: rgb(0, 0, 0);
+  p {
+    color: #fff;
+  }
 }
 </style>>
 
