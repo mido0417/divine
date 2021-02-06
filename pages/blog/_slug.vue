@@ -23,7 +23,6 @@
         <a class="a2a_button_plurk"></a>
         <a class="a2a_button_twitter"></a>
       </div>
-      <script async src="https://static.addtoany.com/menu/page.js"></script>
       <!-- AddToAny END -->
       <!-- <author :author="article.author" /> -->
 
@@ -78,6 +77,11 @@ export default {
           href: `${this.$route.params.slug}`,
         },
       ],
+      script:[
+        {
+          src:'https://static.addtoany.com/menu/page.js'
+        }
+      ]
     };
   },
 
