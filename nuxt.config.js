@@ -1,8 +1,11 @@
+import getRoutes from "./utils/getRoutes";
 const webpack = require('webpack')
+
+let now = new Date();
 
 export default {
 
-  // target:'static',
+  target:'static',
   // router: {
   //   base: '/divine/'
   // },
@@ -84,6 +87,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/style-resources',
     '@nuxtjs/google-gtag',
+    '@nuxtjs/sitemap',
 
   ],
   styleResources: {
@@ -114,7 +118,37 @@ export default {
     // }]
   },
 
+  sitemap: {
+    hostname: 'https://www.life-song.space/',
+    exclude: [
+      '/script',
+      '/blog'
+    ],
 
+    routes:[
+      {
+        url: '/',
+        changefreq: 'daily', // 可能變更的頻率
+        priority: 1, // 網頁的重要程度，0.1 - 1
+        lastmodISO: now.toISOString()
+      },
+      {
+        url: '/blog/page/1',
+        changefreq: 'daily', // 可能變更的頻率
+        priority: 0.6, // 網頁的重要程度，0.1 - 1
+        lastmodISO: now.toISOString()
+      },
+      {
+        url: '/blog/page/2',
+        changefreq: 'daily', // 可能變更的頻率
+        priority: 0.6, // 網頁的重要程度，0.1 - 1
+        lastmodISO: now.toISOString()
+      }
+    ]
+    // routes() {
+    //   return getRoutes();
+    // },
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
