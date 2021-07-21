@@ -14,8 +14,7 @@ export default {
 
 <style lang="scss">
 .footer {
-//   background-color: #fff;
-
+  background-color: #000;
   .wrap {
     padding: 10px 0;
   }
@@ -23,9 +22,9 @@ export default {
   p {
     margin: 0;
     padding: 0;
-    color: #000;
+    color: #fff;
     text-align: center;
   }
 }
-</style>>
+</style>
 

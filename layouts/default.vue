@@ -20,5 +20,5 @@ export default {
     color: #fff;
   }
 }
-</style>>
+</style>
 
