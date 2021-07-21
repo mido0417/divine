@@ -15,7 +15,7 @@ export default {
                     name: "故事劇情推演",
                     subtitle: "雷諾曼預言占卜",
                     intro: "利用雷諾曼強大的劇情推演能力，來推測所問之事的未來發展與走向。",
-                    link: "la",
+                    link: "service/lenormand",
                     ready: false,
                 },
                 {

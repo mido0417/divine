@@ -22,7 +22,7 @@
         <nuxt-link v-if="services.ready" :to="services.link"
           >了解更多</nuxt-link
         >
-        <span v-else style="cursor:no-drop;">即將開放</span>
+        <span v-else style="cursor:no-drop;">準備中</span>
       </div>
     </div>
   </div>
