@@ -10,30 +10,37 @@ export default {
 
     data() {
         return {
+            close: false,
             cards: [
                 {
                     img: require("@/assets/image/tarot/chariot.jpeg"),
-                    name: "故事劇情推演",
-                    subtitle: "雷諾曼預言占卜",
-                    intro: "利用雷諾曼強大的劇情推演能力，來推測所問之事的未來發展與走向。",
+                    title: "VII 戰車",
+                    content1: "利用雷諾曼強大的劇情推演能力，來推測所問之事的未來發展與走向。",
+                    content2: "",
+                    content3: "",
                     link: "service/lenormand",
                     ready: false,
+                    value: "0",
                 },
                 {
                     img: require("@/assets/image/tarot/magician.jpeg"),
-                    name: "探索自我",
-                    subtitle: "塔羅占卜",
-                    intro: "受過往經驗束縛而失去前進的勇氣，想探索靈魂深處真實的自己，讓塔羅牌來輔佐你看到不一樣的自己",
+                    title: "I 魔術師",
+                    content1: "它意味著當你集中注意力並意識到你的需要，你就擁有了掌握宇宙力量的能力，以滿足你的慾望，無論是情感，身體還是社交。",
+                    content2: "但是，您需要充分利用自己的技能，並根據自己的看法讓事情發生。",
+                    content3: "漸漸地，創造性的方式會在你面前展開，從而幫助你快速獲得成功。不久將來，一切都在你的掌握之中。",
                     link: "tarot",
                     ready: false,
+                    value: "1",
                 },
                 {
                     img: require("@/assets/image/tarot/death.jpeg"),
-                    name: "靈魂記憶",
-                    subtitle: "前世回朔引導觀想",
-                    intro: "藉由引導冥想帶你進入前世記憶中，探尋靈魂深處那顆深埋已久的因。",
+                    title: "XII 死神",
+                    content1: "藉由引導冥想帶你進入前世記憶中，探尋靈魂深處那顆深埋已久的因。",
+                    content2: "",
+                    content3: "",
                     link: "re",
-                    ready: true,
+                    ready: false,
+                    value: "2",
                 },
             ],
         };
