@@ -30,6 +30,7 @@ export default {
   data() {
     return {
       close: false,
+      reset: false,
       cards: [
         {
           img: require("@/assets/image/tarot/chariot.jpeg"),
@@ -38,7 +39,6 @@ export default {
             "利用雷諾曼強大的劇情推演能力，來推測所問之事的未來發展與走向。",
           content2: "",
           content3: "",
-          link: "service/lenormand",
           ready: false,
           value: "0",
         },
@@ -51,7 +51,6 @@ export default {
             "但是，您需要充分利用自己的技能，並根據自己的看法讓事情發生。",
           content3:
             "漸漸地，創造性的方式會在你面前展開，從而幫助你快速獲得成功。不久將來，一切都在你的掌握之中。",
-          link: "tarot",
           ready: false,
           value: "1",
         },
@@ -62,7 +61,6 @@ export default {
             "藉由引導冥想帶你進入前世記憶中，探尋靈魂深處那顆深埋已久的因。",
           content2: "",
           content3: "",
-          link: "re",
           ready: false,
           value: "2",
         },

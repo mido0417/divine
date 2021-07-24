@@ -54,10 +54,10 @@ export default {
     }),
 
     mounted() {
-        this.$nextTick(() => {
-            this.$nuxt.$loading.start()
-            setTimeout(() => this.$nuxt.$loading.finish(), 5000)
-        })
+        // this.$nextTick(() => {
+        //     this.$nuxt.$loading.start()
+        //     setTimeout(() => this.$nuxt.$loading.finish(), 5000)
+        // })
 
         $(document).ready(function (e) {
             var star01 = $(".story-wrap .star").offset().top;

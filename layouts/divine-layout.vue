@@ -17,10 +17,16 @@ export default {
 
 <style lang="scss">
 .divine-wrap{
-background: linear-gradient(0deg, #ffddbf 5%,#dd4a68 20%, #5f0738 45%);
-background: -moz-linear-gradient(0deg, #ffddbf 5%,#dd4a68 20%, #5f0738 45%);
-background: -webkit-linear-gradient(0deg, #ffddbf 5%,#dd4a68 20%, #5f0738 45%);
-background: -o-linear-gradient(0deg, #ffddbf 5%,#dd4a68 20%, #5f0738 45%);
+// background: linear-gradient(0deg, #ffddbf 5%,#dd4a68 20%, #5f0738 45%);
+// background: -moz-linear-gradient(0deg, #ffddbf 5%,#dd4a68 20%, #5f0738 45%);
+// background: -webkit-linear-gradient(0deg, #ffddbf 5%,#dd4a68 20%, #5f0738 45%);
+// background: -o-linear-gradient(0deg, #ffddbf 5%,#dd4a68 20%, #5f0738 45%);
+
+background: linear-gradient(0deg, #ffffff 5%,#2a5aa1 20%, #020b3a 45%);
+background: -moz-linear-gradient(0deg, #ffffff 5%,#2a5aa1 20%, #020b3a 45%);
+background: -webkit-linear-gradient(0deg, #ffffff 5%,#2a5aa1 20%, #020b3a 45%);
+background: -o-linear-gradient(0deg, #ffffff 5%,#2a5aa1 20%, #020b3a 45%);
+
 }
 
 
