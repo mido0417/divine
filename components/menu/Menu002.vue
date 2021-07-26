@@ -7,9 +7,9 @@
       li
         nuxt-link(to="/blog") BLOG
       li
-        a(href="#") service
+        a.no-drop() service
       li
-        a(href="https://open.firstory.me/user/flower-of-ones/platforms") PODCAST
+        a.no-drop() PODCAST
 </template>
 
 <script>
@@ -47,6 +47,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.no-drop {
+  cursor: no-drop;
+}
+
 .menu-wrap {
   display: flex;
   justify-content: center;

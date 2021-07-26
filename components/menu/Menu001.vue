@@ -9,9 +9,9 @@
       li
         nuxt-link(to="/blog") BLOG
       li
-        a(href="#") service
+        a.no-drop service
       li
-        a(href="https://open.firstory.me/user/flower-of-ones/platforms") PODCAST
+        a.no-drop PODCAST
 </template>
 
 <script>
@@ -28,7 +28,6 @@ export default {
       $(window).scroll(function (e) {
         check_main_menu();
       });
-
 
       function check_main_menu() {
         var wt = $(window).scrollTop();
@@ -49,6 +48,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.no-drop {
+  cursor: no-drop;
+}
+
 .menu-wrap {
   display: flex;
   justify-content: center;
@@ -58,7 +61,7 @@ export default {
   background-color: rgba(0, 0, 0);
 
   .menu {
-    transition: padding .3s;
+    transition: padding 0.3s;
     &.fix {
       position: fixed;
       top: 0;
@@ -83,7 +86,7 @@ export default {
 
         a {
           text-decoration: none;
-          text-transform:uppercase;
+          text-transform: uppercase;
           color: rgb(255 255 255 / 0.35);
           padding: 10px 0;
           display: block;
@@ -92,7 +95,7 @@ export default {
           &:hover {
             color: #fff;
           }
-          &.nuxt-link-exact-active{
+          &.nuxt-link-exact-active {
             color: #fff;
           }
         }
