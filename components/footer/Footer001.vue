@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="wrap copy">
-      <p>Copyright © 2021 Claire. All rights reserved.</p>
+      <p>Copyright ©Claire. All rights reserved.</p>
     </div>
   </div>
 </template>
