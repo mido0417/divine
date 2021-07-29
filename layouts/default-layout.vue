@@ -13,11 +13,6 @@ export default {
 </script>
 
 <style lang="scss">
-#index .footer {
-  background-color: rgb(0, 0, 0);
-  p {
-    color: #fff;
-  }
-}
+
 </style>
 

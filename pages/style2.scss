@@ -3,12 +3,12 @@ body {
   position: relative;
 }
 
-#index {
+.index {
   overflow: hidden;
+  padding: 0 40px;
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -84,9 +84,6 @@ body {
 }
 
 .container {
-  background-color: #000;
-  // padding: 150px 0 0;
-  padding: 0;
   p {
     color: rgba(255, 255, 255, 0.6);
     margin-top: 1em;
