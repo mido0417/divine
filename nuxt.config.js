@@ -42,6 +42,10 @@ export default {
         href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'
       },
       {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'
+      },
+      {
         rel: "canonical",
         href: 'http://www.life-song.space',
       }
@@ -54,6 +58,11 @@ export default {
       },
       {
         src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js',
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
+        integrity:'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM',
+        crossorigin: 'anonymous'
       },
       // {
       //   hid:"tawk.to",
@@ -125,7 +134,7 @@ export default {
       '/blog'
     ],
 
-    routes:[
+    routes: [
       {
         url: '/',
         changefreq: 'daily', // 可能變更的頻率
