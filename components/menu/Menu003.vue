@@ -1,7 +1,10 @@
 <template lang="pug">
 .main-menu
-  .logo
-    p Logo圖來自Keyi@i11w11
+  .logo-wrap
+    .logo
+    .slogan
+      p Flower Witch
+      p.name Claire Lin
   button.navbar(
     type="button",
     @click="navToggle",
@@ -33,36 +36,6 @@ export default {
       this.isNavToggle = !this.isNavToggle;
       // console.log("11111");
     },
-  },
-
-  mounted() {
-    $(document).ready(function (e) {
-      var xPos = 0;
-      var yPos = 0;
-      var lastScrolled = 0;
-      var __this = this;
-
-      var menu_scroll_top1 = $(".main-menu").offset().top;
-      mainMenuScroll();
-
-      $(window).scroll(function (e) {
-        mainMenuScroll();
-      });
-
-      function mainMenuScroll() {
-        var wt = $(window).scrollTop();
-        var menu_scroll_top2 = $(".main-menu").offset().top;
-
-        if (wt >= menu_scroll_top2) {
-          $(".main-menu").addClass("fix");
-          // console.log('wt >= menu_scroll_top2')
-        }
-
-        if (wt < menu_scroll_top1) {
-          $(".main-menu").removeClass("fix");
-        }
-      }
-    });
   },
 };
 </script>
@@ -108,6 +81,9 @@ button {
   }
 
   &.nav-open {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
     .navbar-icon {
       background-color: transparent;
       &::after,
@@ -177,35 +153,73 @@ a {
   flex-wrap: wrap;
   flex-direction: row;
   background-color: transparent;
-  position: absolute;
-  left: 0;
-  right: 0;
+  // position: absolute;
+  // left: 0;
+  // right: 0;
   z-index: 10;
-  padding: 0 10px;
+
   @media (min-width: $md) {
-    padding: 0 40px;
+    // padding: 0 40px;
   }
   // max-width: 100%;
   // width: 100%;
-
-  &.fix {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(103, 92, 88);
-    a {
-      
-      color: #a9a0a4;
-      &.nuxt-link-active {
-        color: #fbfaf9;
-      }
-    }
-  }
 }
 .navbar {
   @media (min-width: $md) {
     display: none;
+  }
+}
+
+.fix {
+  .logo {
+    background-image: url("~assets/image/logo/logo_fix.png");
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+  }
+
+  .slogan {
+    p {
+      color: #fbfaf9;
+    }
+  }
+
+  button {
+    .navbar-icon {
+      background-color: #fbfaf9;
+      &::after,
+      &::before {
+        background-color: #fbfaf9;
+      }
+    }
+
+    &.nav-open {
+      .navbar-icon {
+        &::after,
+        &::before {
+          background-color: #675c58;
+        }
+      }
+    }
+  }
+
+  .main-menu {
+    padding: 0 10px;
+  }
+  a {
+    color: #a9a0a4;
+    &.nuxt-link-active {
+      color: #fbfaf9;
+    }
+  }
+
+  .menu.nav-open {
+    a {
+      color: rgba(103, 92, 88, 0.6);
+      &.nuxt-link-exact-active {
+        color: #675c58;
+      }
+    }
   }
 }
 
@@ -236,33 +250,32 @@ a {
   }
 }
 
-.logo {
-  width: 50px;
-  height: 50px;
-  background-image: url("https://images.plurk.com/3rNys2JdaYjm2Y39jCqAwj.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin: 20px 0 10px;
-  position: relative;
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
 
+.slogan {
+  margin-left: 5px;
+  margin-top: 7px;
   p {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
-    left: 45px;
-    top: 45px;
-    opacity: 0;
-    transition: 0.3s;
+    font-family: "Caudex";
+    color: #675c58;
   }
+  .name {
+    font-size: 1.25rem;
+    margin-top: 2px;
+  }
+}
 
-  &:hover {
-    p {
-      opacity: 1;
-    }
-  }
+.logo {
+  width: 80px;
+  height: 80px;
+  display: block;
+  max-width: 100%;
+  background-image: url("~assets/image/logo/logo.png");
+  background-size: contain;
+  transition: all 0.5s;
 }
 
 @keyframes nav_bef {

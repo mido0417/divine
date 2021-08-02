@@ -6,24 +6,29 @@
                 p.wow.animate__animated.animate__fadeInLeft.animate__slow 探索自我
                 p.wow.animate__animated.animate__fadeIn.animate__slow.separate(data-wow-delay="1s") ◊
                 p.wow.animate__animated.animate__fadeInRight.animate__slow(data-wow-delay="2s") 發現內心的光芒
-    Menu
-    .container-full
-        .content-wrap
-            .intro
+    .menu-wrap
+        Menu
+    .container
+        .intro
+            .wrap
+                h2(style="display:none;") About
+                .intro-title.wow.animate__animated.animate__fadeInDown(data-wow-offset="30")
+                    p 花草魔女 Claire Lin
+                    p 簡單生活實踐者
                 .photo.wow.animate__animated.animate__fadeIn(data-wow-offset="30")
-                    img(src="~assets/image/avatar.png" alt="avatar")
-                .wrap
-                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") Claire
-                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 雷諾曼/塔羅/精油調香
-                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 1994年生於嘉義
-                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 喜歡聽故事和閱讀
-                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 擅長使用雷諾曼與塔羅
-                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 能藉由牌卡來釐清當前課題與未來發展
-                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 透過聊天、對談，給陷入迷惘的朋友溫暖與前行方向
-            .service
-                Service001(:services="item" v-for="(item,index) of services" :key="services.index" :data-wow-delay="'0.'+index + 's'")
-            .blog
-                
-            .contact
-                .wrap
-    Footer
+                    .avatar
+                .intro-content-wrap
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 擅長使用精油與香氣撫平疲憊的身心
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 能透過雷諾曼和塔羅，看見並了解內心深處的自我
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 像摯友一般的溫柔陪伴、傾聽、分享
+                    p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 藉由聊天、對談，給陷入迷惘的朋友溫暖與前行方向
+            .photo.wow.animate__animated.animate__fadeIn(data-wow-offset="30")
+                .avatar
+        .services
+            h2.info-title Services
+            Service002(:services="item" v-for="(item,index) of services" :key="services.index" :data-wow-delay="'0.'+index + 's'")
+        .blog
+            
+        .contact
+            .wrap
+    Footer.full-content

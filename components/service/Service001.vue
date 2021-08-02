@@ -93,7 +93,7 @@ export default {
     h3,
     a,
     span {
-      color: #fff;
+      color: #675c58;
     }
     .link {
       opacity: 1;
@@ -118,7 +118,7 @@ export default {
   span {
     transition: all 0.3s;
     text-decoration: none;
-    color: rgb(255 255 255 / 0.35);
+    color: rgba(103, 92, 88, 0.6);
   }
   .photo {
     transition: all 0.3s;
@@ -162,7 +162,7 @@ export default {
       display: block;
       width: 20%;
       height: 2px;
-      background-color: rgb(255 255 255 / 0.35);
+      background-color: rgba(103, 92, 88, 0.6);
       margin-left: 10px;
       @media (min-width: $lg) {
         width: 40%;
@@ -174,7 +174,7 @@ export default {
       display: block;
       width: 20%;
       height: 2px;
-      background-color: rgb(255 255 255 / 0.35);
+      background-color: rgba(103, 92, 88, 0.6);
       margin-right: 10px;
       @media (min-width: $lg) {
         width: 40%;

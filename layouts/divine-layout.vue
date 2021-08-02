@@ -27,12 +27,5 @@ export default {
   background: -webkit-linear-gradient(0deg, #2a5aa1 20%, #020b3a 45%);
   background: -o-linear-gradient(0deg, #2a5aa1 20%, #020b3a 45%);
 }
-
-.footer {
-  background-color: transparent;
-  p {
-    color: #fff;
-  }
-}
 </style>
 

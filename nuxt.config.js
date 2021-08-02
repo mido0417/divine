@@ -31,7 +31,7 @@ export default {
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans:wght@400;700&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans:wght@400;700&family=Caveat&family=Caudex&display=swap'
       },
       {
         rel: 'stylesheet',
@@ -41,10 +41,10 @@ export default {
         rel: 'stylesheet',
         href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'
-      },
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'
+      // },
       {
         rel: "canonical",
         href: 'http://www.life-song.space',
@@ -59,11 +59,11 @@ export default {
       {
         src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js',
       },
-      {
-        src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
-        integrity:'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM',
-        crossorigin: 'anonymous'
-      },
+      // {
+      //   src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
+      //   integrity:'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM',
+      //   crossorigin: 'anonymous'
+      // },
       // {
       //   hid:"tawk.to",
       //   src:"https://embed.tawk.to/6009825ea9a34e36b96ed6ca/1esiiagv5",
