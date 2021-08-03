@@ -93,7 +93,7 @@ export default {
     h3,
     a,
     span {
-      color: #675c58;
+      color: $mbc;
     }
     .link {
       opacity: 1;

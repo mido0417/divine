@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss">
 .footer {
-  background-color: #675c58;
+  background-color: $mbc;
   .wrap {
     padding: 10px 0;
   }
@@ -22,7 +22,7 @@ export default {
   p {
     margin: 0;
     padding: 0;
-    color: #fbfaf9;
+    color: $lsc;
     text-align: center;
   }
 }

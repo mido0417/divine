@@ -21,7 +21,7 @@ img {
 }
 
 h3 {
-  color: #675d58;
+  color: $dsc;
   text-align: center;
   font-size: 1.05rem;
 }
@@ -34,18 +34,18 @@ h3 {
   max-width: 100%;
   width: 100%;
   padding: 20px 0;
-  border: 1px solid #675d58;
+  border: 1px solid $mbc;
   border-top: none;
   @media (min-width: $md) {
     flex: 1;
     padding: 20px 0;
     margin: 0;
-    border-top: 1px solid #675d58;
-    border-bottom: 1px solid #675d58;
-    border-right: 1px solid #675d58;
+    border-top: 1px solid $mbc;
+    border-bottom: 1px solid $mbc;
+    border-right: 1px solid $mbc;
     border-left: none;
     &:nth-child(2) {
-      border-left: 1px solid #675d58;
+      border-left: 1px solid $mbc;
     }
   }
 }

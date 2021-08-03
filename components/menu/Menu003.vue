@@ -41,9 +41,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
 .no-drop {
   cursor: no-drop;
 }
+
 
 button {
   background-color: transparent;
@@ -58,7 +61,7 @@ button {
   .navbar-icon {
     width: 100%;
     height: 2px;
-    background-color: #675c58;
+    background-color: $mbc;
     display: block;
     transition: all 0.3s;
     &::after,
@@ -68,7 +71,7 @@ button {
       content: "";
       width: 100%;
       height: 2px;
-      background-color: #675c58;
+      background-color: $mbc;
       transition: all 0.5s;
     }
     &::before {
@@ -88,7 +91,7 @@ button {
       background-color: transparent;
       &::after,
       &::before {
-        background-color: #675c58;
+        background-color: $mbc;
         animation-delay: 0.8s;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
@@ -109,6 +112,7 @@ button {
   }
 }
 
+
 ul {
   list-style: none;
   display: flex;
@@ -125,24 +129,26 @@ ul {
   }
 }
 
+
 a {
   text-decoration: none;
   text-transform: uppercase;
-  color: rgba(103, 92, 88, 0.6);
+  color: $mbc;
   padding: 10px 0;
   display: block;
   transition: 0.3s;
   text-align: center;
   font-size: 1.25rem;
+  opacity: 0.5;
 
   @media (min-width: $md) {
     font-size: 1rem;
   }
   &:hover {
-    color: #675c58;
+    opacity: 1;
   }
   &.nuxt-link-exact-active {
-    color: #675c58;
+    opacity: 1;
   }
 }
 
@@ -180,16 +186,16 @@ a {
 
   .slogan {
     p {
-      color: #fbfaf9;
+      color: $lsc;
     }
   }
 
   button {
     .navbar-icon {
-      background-color: #fbfaf9;
+      background-color: $lsc;
       &::after,
       &::before {
-        background-color: #fbfaf9;
+        background-color: $lsc;
       }
     }
 
@@ -197,7 +203,7 @@ a {
       .navbar-icon {
         &::after,
         &::before {
-          background-color: #675c58;
+          background-color: $mbc;
         }
       }
     }
@@ -207,25 +213,25 @@ a {
     padding: 0 10px;
   }
   a {
-    color: #a9a0a4;
+    color: $lsc;
     &.nuxt-link-active {
-      color: #fbfaf9;
+      color: $lsc;
     }
   }
 
-  .menu.nav-open {
-    a {
-      color: rgba(103, 92, 88, 0.6);
-      &.nuxt-link-exact-active {
-        color: #675c58;
-      }
-    }
-  }
+  // .menu.nav-open {
+  //   a {
+  //     color: $mbc;
+  //     &.nuxt-link-exact-active {
+  //       color: $lac;
+  //     }
+  //   }
+  // }
 }
 
 .menu {
   transition: padding 0.3s;
-  background-color: #fff2e2;
+  background-color: $lsc;
   position: fixed;
   top: 0;
   left: 0;
@@ -260,7 +266,7 @@ a {
   margin-top: 7px;
   p {
     font-family: "Caudex";
-    color: #675c58;
+    color: $mbc;
   }
   .name {
     font-size: 1.25rem;
@@ -289,4 +295,5 @@ a {
     transform: rotate(-45deg);
   }
 }
+
 </style>
