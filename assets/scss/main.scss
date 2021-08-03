@@ -132,7 +132,7 @@ h4,
 h5,
 h6,
 span {
-    font-family: "Noto Sans", sans-serif,'Caveat', cursive,'Caudex', Arial, sans-serif;
+    font-family: "Noto Sans", sans-serif, "Caveat", cursive, "Caudex", Arial, sans-serif;
 }
 
 .nuxt-content {
@@ -148,8 +148,11 @@ span {
     }
 }
 
-.full-content{
-    margin: 0 -40px;
+.full-content {
+    margin: 0 -10px;
+    @media (min-width: $md) {
+        margin: 0 -40px;
+    }
 }
 
 .content-wrap {

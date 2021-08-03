@@ -20,7 +20,8 @@ body {
   z-index: 1;
 }
 
-.banner {
+.banner,
+.contact {
   p {
     padding: 0;
     margin: 0;
@@ -230,20 +231,47 @@ body {
   }
 }
 
-.container > div {
-  margin-bottom: 50px;
+.contact {
+  .wrap {
+    height: 23rem;
+    background-image: url("https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80");
+  }
+  .text-wrap {
+    // max-width: 100%;
+    // width: 100%;
+    @media (min-width: $md) {
+      left: 150px;
+    }
+
+    p {
+      color: $lsc;
+      font-size: 2.25rem;
+      font-style: italic;
+    }
+    .btn-wrap {
+      margin-top: 10px;
+      text-align: center;
+      @media (min-width: $md) {
+        text-align: left;
+      }
+      .more-btn {
+        letter-spacing: 3px;
+      }
+    }
+  }
 }
 
-.btn-wrap {
+.container > div {
+  margin-bottom: 50px;
 }
 
 .more-btn {
   background-color: $lac;
   color: $lsc;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  letter-spacing: 1.5px;
+  padding: 10px 25px;
+  // border-radius: 5px;
+  letter-spacing: 3px;
   font-size: 0.9rem;
   margin-top: 20px;
 }
