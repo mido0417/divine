@@ -41,12 +41,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 .no-drop {
   cursor: no-drop;
 }
-
 
 button {
   background-color: transparent;
@@ -112,7 +109,6 @@ button {
   }
 }
 
-
 ul {
   list-style: none;
   display: flex;
@@ -128,7 +124,6 @@ ul {
     margin: 0 10px;
   }
 }
-
 
 a {
   text-decoration: none;
@@ -159,9 +154,10 @@ a {
   flex-wrap: wrap;
   flex-direction: row;
   background-color: transparent;
-  // position: absolute;
-  // left: 0;
-  // right: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 10;
 
   @media (min-width: $md) {
@@ -210,23 +206,21 @@ a {
   }
 
   .main-menu {
+    position: static;
     padding: 0 10px;
   }
   a {
-    color: $lsc;
+    color: $mbc;
     &.nuxt-link-active {
+      color: $mbc;
+    }
+    @media (min-width: $md) {
       color: $lsc;
+      &.nuxt-link-active {
+        color: $lsc;
+      }
     }
   }
-
-  // .menu.nav-open {
-  //   a {
-  //     color: $mbc;
-  //     &.nuxt-link-exact-active {
-  //       color: $lac;
-  //     }
-  //   }
-  // }
 }
 
 .menu {
@@ -295,5 +289,4 @@ a {
     transform: rotate(-45deg);
   }
 }
-
 </style>

@@ -5,7 +5,6 @@
 
 
 <script>
-
 export default {
   mounted() {
     new WOW().init();
@@ -14,6 +13,13 @@ export default {
       var yPos = 0;
       var lastScrolled = 0;
       var __this = this;
+
+      // get menu height
+
+      console.log($(".menu-wrap").height());
+
+      var MenuH = $(".menu-wrap").height();
+      $(".banner").css("margin-bottom", MenuH);
 
       var menu_scroll_top1 = $(".menu-wrap").offset().top;
       mainMenuScroll();
