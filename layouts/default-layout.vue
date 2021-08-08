@@ -15,11 +15,13 @@ export default {
       var __this = this;
 
       // get menu height
-
-      console.log($(".menu-wrap").height());
-
-      var MenuH = $(".menu-wrap").height();
+      var MenuH = $(".main-menu").height();
       $(".banner").css("margin-bottom", MenuH);
+
+      $(window).resize(function () {
+        var MenuH = $(".main-menu").height();
+        $(".banner").css("margin-bottom", MenuH);
+      });
 
       var menu_scroll_top1 = $(".menu-wrap").offset().top;
       mainMenuScroll();

@@ -14,25 +14,25 @@ export default {
             services: [
                 {
                     img: require("@/assets/image/service/le-card.png"),
-                    title:"雷諾曼預言占卜",
+                    title: "雷諾曼預言占卜",
                     link: "services/lenormand",
                     ready: false,
                 },
                 {
                     img: require("@/assets/image/service/tarot-card.png"),
-                    title:"塔羅占卜",
+                    title: "塔羅占卜",
                     link: "services/tarot",
                     ready: false,
                 },
                 {
                     img: require("@/assets/image/service/recode.png"),
-                    title:"前世回朔引導",
+                    title: "前世回朔引導",
                     link: "services/re",
                     ready: true,
                 },
                 {
                     img: require("@/assets/image/service/potion.png"),
-                    title:"客製精油調香",
+                    title: "客製精油調香",
                     link: "services/oil",
                     ready: false,
                 },
@@ -40,7 +40,21 @@ export default {
         };
     },
 
+    async asyncData({ $content, params }) {
+        const topArticles = await $content("blog")
+            .only([
+                "title",
+                "createdAt",
+                "top",
+            ])
+            .sortBy("createdAt", "desc")
+            .where({ top: true })
+            .fetch();
 
+        return {
+            topArticles,
+        };
+    },
 
 
     head: () => ({

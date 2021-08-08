@@ -30,11 +30,13 @@
             Service002(:services="item" v-for="(item,index) of services" :key="services.index" :data-wow-delay="'0.'+index + 's'")
             .btn-wrap
                 button.services-btn.more-btn(type="button") 瞭解更多
-        .full-content.parallax.contact
+        .contact.full-content
             .wrap
                 .text-wrap
-                    p.wow.animate__animated.animate__fadeInLeft.animate__slow 先美好自己，便能連結世界
+                    p.wow.animate__animated.animate__fadeInLeft.animate__slow 美好自己，便能連結世界
                     .btn-wrap
                         button.contact-btn.more-btn(type="button") 預約諮詢
         .blog
+            li.blog-item(v-for="article of topArticles" :key="article.slug")
+                p {{ article.title }}
     Footer.full-content

@@ -40,12 +40,12 @@ h3 {
     flex: 1;
     padding: 20px 0;
     margin: 0;
-    border-top: 1px solid $mbc;
-    border-bottom: 1px solid $mbc;
-    border-right: 1px solid $mbc;
+    border-top: 1px solid $lac;
+    border-bottom: 1px solid $lac;
+    border-right: 1px solid $lac;
     border-left: none;
     &:nth-child(2) {
-      border-left: 1px solid $mbc;
+      border-left: 1px solid $lac;
     }
   }
 }
