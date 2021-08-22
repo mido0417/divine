@@ -41,11 +41,12 @@ export default {
     },
 
     async asyncData({ $content, params }) {
-        const topArticles = await $content("blog")
+        const topArticles = await $content("blog", params.slug)
             .only([
                 "title",
                 "createdAt",
                 "top",
+                "slug",
             ])
             .sortBy("createdAt", "desc")
             .where({ top: true })

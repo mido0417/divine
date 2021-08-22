@@ -36,7 +36,10 @@
                     p.wow.animate__animated.animate__fadeInLeft.animate__slow 美好自己，便能連結世界
                     .btn-wrap
                         button.contact-btn.more-btn(type="button") 預約諮詢
-        .blog
-            li.blog-item(v-for="article of topArticles" :key="article.slug")
-                p {{ article.title }}
+        .blog.full-content
+            ul
+                li.blog-item(v-for="article of topArticles" :key="article.slug")
+                    NuxtLink.blog-link-wrap(:to="{ name: 'blog-slug', params: { slug: article.slug } }") 
+                        p {{ article.title }}
+                        p.read-more 閱讀文章
     Footer.full-content
