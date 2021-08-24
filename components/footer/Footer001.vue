@@ -1,9 +1,10 @@
-<template>
-  <div class="footer">
-    <div class="wrap copy">
-      <p>Copyright ©Claire. All rights reserved.</p>
-    </div>
-  </div>
+<template lang="pug">
+  .footer
+    .social
+      ul
+        li
+    .wrap.copy
+      p Copyright ©ClaireLin. All rights reserved.
 </template>
 
 <script>

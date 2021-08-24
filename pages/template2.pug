@@ -26,7 +26,7 @@
             .photo.wow.animate__animated.animate__fadeIn(data-wow-offset="30")
                 img.avatar(src="~assets/image/avatar.png")
         .services
-            h2.info-title Services
+            h2.info-title 服務項目
             Service002(:services="item" v-for="(item,index) of services" :key="services.index" :data-wow-delay="'0.'+index + 's'")
             .btn-wrap
                 button.services-btn.more-btn(type="button") 瞭解更多
@@ -42,4 +42,7 @@
                     NuxtLink.blog-link-wrap(:to="{ name: 'blog-slug', params: { slug: article.slug } }") 
                         p {{ article.title }}
                         p.read-more 閱讀文章
-    Footer.full-content
+    footer.footer.full-content
+        .social-menu-wrap
+            SocialMenu(:socials="item" v-for="(item,index) of socials" :key="socials.index")
+        p.copyright Copyright © By ClaireLin. All rights reserved.
