@@ -1,14 +1,11 @@
 import Menu from "@/components/menu/Menu003.vue";
-// import Footer from "@/components/footer/Footer001.vue";
 import Service002 from "@/components/service/Service002.vue";
-import SocialMenu from "@/components/menu/SocialMenu001.vue";
+
 
 export default {
     components: {
         Menu,
-        // Footer,
         Service002,
-        SocialMenu
     },
     layout: "default-layout",
     data() {
@@ -39,26 +36,6 @@ export default {
                     ready: false,
                 },
             ],
-            socials: [
-                {
-                    name: "fb",
-                    icon: "fab fa-facebook",
-                    link: "",
-                    ready: false,
-                },
-                {
-                    name: "ig",
-                    icon: "fab fa-instagram",
-                    link: "https://www.instagram.com/claire.lin417/",
-                    ready: true,
-                },
-                {
-                    name: "mail",
-                    icon: "far fa-envelope",
-                    link: "mailto:claire.lin@clairelin.space",
-                    ready: true,
-                }
-            ]
         };
     },
 

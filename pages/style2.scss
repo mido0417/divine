@@ -359,33 +359,6 @@ padding-top: 10px;
   }
 }
 
-.footer {
-  // background: $lac; /* Old browsers */
-  // background: -moz-linear-gradient(top, $lac 0%, $mbc 100%); /* FF3.6-15 */
-  // background: -webkit-linear-gradient(
-  //   top,
-  //   $lac 0%,
-  //   $mbc 100%
-  // ); /* Chrome10-25,Safari5.1-6 */
-  // background: linear-gradient(
-  //   to bottom,
-  //   $lac 0%,
-  //   $mbc 100%
-  // ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#937d79', endColorstr='#675c58',GradientType=0 ); /* IE6-9 */
-  background-color: $mbc;
-  .social-menu-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0 10px;
-  }
-  .copyright {
-    background-color: $mbc;
-    padding: 10px 0;
-  }
-}
-
 .intro,
 .services {
   margin-bottom: 50px;
@@ -395,12 +368,14 @@ padding-top: 10px;
   background-color: $mbc;
   color: $lsc;
   border: none;
-  padding: 10px 25px;
+  padding: 13px 25px;
   border-radius: 2px;
   letter-spacing: 3px;
   font-size: 0.9rem;
   margin-top: 20px;
   transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none;
   &:hover {
     background-color: $dsc;
     cursor: pointer;

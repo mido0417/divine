@@ -17,16 +17,13 @@
                         p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 透過聊天、對談，給陷入迷惘的朋友溫暖與前行方向
                 .photo.wow.animate__animated.animate__fadeIn(data-wow-offset="30")
                     .avatar
-        Footer
 </template>
 
 <script>
 import Menu from "@/components/menu/Menu003.vue";
-import Footer from "@/components/footer/Footer001.vue";
 export default {
     components: {
         Menu,
-        Footer,
     },
     layout: "default-layout",
 }

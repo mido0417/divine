@@ -1,8 +1,5 @@
 <template lang="pug">
   .footer
-    .social
-      ul
-        li
     .wrap.copy
       p Copyright ©ClaireLin. All rights reserved.
 </template>
