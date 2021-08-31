@@ -25,7 +25,7 @@ export default {
     components: {
         Menu,
     },
-    layout: "default-layout",
+    layout: "default",
 }
 </script>
 

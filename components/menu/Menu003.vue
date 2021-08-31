@@ -18,7 +18,7 @@
       li
         nuxt-link(to="/blog") BLOG
       li
-        a.no-drop Services
+        nuxt-link(to="/service") Services
       li
         a.no-drop PODCAST
 </template>
@@ -154,11 +154,6 @@ a {
   flex-wrap: wrap;
   flex-direction: row;
   background-color: transparent;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
 
   @media (min-width: $md) {
     // padding: 0 40px;

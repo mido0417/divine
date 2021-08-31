@@ -1,7 +1,7 @@
 <template lang="pug">
 #index
   Nuxt
-  Footer001
+  Footer002
 </template>
 
 
@@ -14,11 +14,6 @@ export default {
 </script>
 
 <style lang="scss">
-#index .footer {
-  background-color: rgb(0, 0, 0);
-  p {
-    color: #fff;
-  }
-}
+
 </style>
 
