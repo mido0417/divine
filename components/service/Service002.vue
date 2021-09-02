@@ -1,7 +1,7 @@
 <template lang="pug">
 .services-item
   .img-wrap
-    img(:src="services.img")
+    img(:src="services.img" :alt="services.alt")
   .title-wrap
     h3 {{ services.title }}
 </template>

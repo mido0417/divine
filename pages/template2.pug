@@ -16,7 +16,7 @@
                     p 花草魔女 Claire Lin
                     p 簡單生活實踐者
                 .photo.wow.animate__animated.animate__fadeIn(data-wow-offset="30")
-                    img.avatar(src="~assets/image/avatar.png")
+                    img.avatar(src="~assets/image/avatar.png" alt="avatar")
                 .intro-content-wrap
                     p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 擅長使用精油與香氣撫平疲憊的身心
                     p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 能透過雷諾曼和塔羅，看見並了解內心深處的自我
@@ -24,7 +24,7 @@
                     p.wow.animate__animated.animate__fadeInDown(data-wow-offset="30") 藉由聊天、對談，給陷入迷惘的朋友溫暖與前行方向
                     nuxt-link(to="about").intro-btn.more-btn 瞭解更多
             .photo.wow.animate__animated.animate__fadeIn(data-wow-offset="30")
-                img.avatar(src="~assets/image/avatar.png")
+                img.avatar(src="~assets/image/avatar.png" alt="avatar")
         .services
             h2.info-title 服務項目
             Service002(:services="item" v-for="(item,index) of services" :key="services.index" :data-wow-delay="'0.'+index + 's'")
