@@ -18,14 +18,16 @@ export default {
       var yPos = 0;
       var lastScrolled = 0;
       var __this = this;
-
-      // get menu height
-      var MenuH = $(".main-menu").height();
-      $(".banner").css("margin-bottom", MenuH);
-
-      $(window).resize(function () {
+      if ($("#default-layout div:first-child").attr("class") == "index") {
+        // get menu height
         var MenuH = $(".main-menu").height();
         $(".banner").css("margin-bottom", MenuH);
+      }
+      $(window).resize(function () {
+        if ($("#default-layout div:first-child").attr("class") == "index") {
+          var MenuH = $(".main-menu").height();
+          $(".banner").css("margin-bottom", MenuH);
+        }
       });
 
       var menu_scroll_top1 = $(".menu-wrap").offset().top;
@@ -38,14 +40,16 @@ export default {
       function mainMenuScroll() {
         var wt = $(window).scrollTop();
         var menu_scroll_top2 = $(".menu-wrap").offset().top;
+        // console.log($("#default-layout div:first-child").attr("class"));
+        if ($("#default-layout div:first-child").attr("class") == "index") {
+          if (wt >= menu_scroll_top2) {
+            $(".menu-wrap").addClass("fix");
+            // console.log('wt >= menu_scroll_top2')
+          }
 
-        if (wt >= menu_scroll_top2) {
-          $(".menu-wrap").addClass("fix");
-          // console.log('wt >= menu_scroll_top2')
-        }
-
-        if (wt < menu_scroll_top1) {
-          $(".menu-wrap").removeClass("fix");
+          if (wt < menu_scroll_top1) {
+            $(".menu-wrap").removeClass("fix");
+          }
         }
       }
     });
@@ -54,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss">
-.default-layout{
+.default-layout {
   overflow: hidden;
 }
 </style>
