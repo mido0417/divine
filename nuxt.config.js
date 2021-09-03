@@ -20,7 +20,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '探索自我，發現內心的光芒' },
-      { name: 'keywords', content: '靈性,精油,塔羅,雷諾曼,占卜,靈魂,靈訊,調香,客製精油,花草魔女,魔女,魔法' },
+      { name: 'keywords', content: '靈性,精油,塔羅,雷諾曼,占卜,靈魂,靈訊,調香,客製精油,花草魔女,魔女,魔法,芳療' },
       { hid: 'og:locale', property: 'og:locale', content: 'zh-TW' },
       { hid: 'og:title', property: 'og:title', content: '花草魔女 Claire' },
       { hid: 'og:description', property: 'og:description', content: '探索自我，發現內心的光芒' },

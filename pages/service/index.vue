@@ -3,22 +3,23 @@
   .menu-wrap.full-content
     Menu
   .banner.full-content
-    h2.page-title 服務項目
+    h2.page-title 服務介紹
   .container
     .service-content-wrap
       .service-item(
-        :services="item",
         v-for="(item,index) of services",
         :key="services.index",
         :data-wow-delay="'0.' + index + 's'"
       )
         .img-wrap
           img.intro-img(:src="item.img", :alt="item.subtitle")
-        .intro-content-wrap
+        .intro-wrap
           .title-wrap
             h3.title {{ item.name }}
             h3.subtitle {{ item.subtitle }}
-          .intro-wrap
+          .des-wrap
+            p {{ item.intro }}
+          .intro-content-wrap
             p(v-if="item.content01") {{ item.content01 }}
             p(v-if="item.content02") {{ item.content02 }}
             p(v-if="item.content03") {{ item.content03 }}
@@ -31,7 +32,21 @@ export default {
     Menu,
   },
   layout: "default-layout",
-
+  head: {
+    title: '服務介紹｜花草魔女 Claire',
+    meta: [
+      { hid: 'description', name: 'description', content: '探索自我，發現內心的光芒' },
+      { hid: 'og:title', property: 'og:title', content: '服務介紹｜花草魔女 Claire' },
+      { hid: 'og:description', property: 'og:description', content: '探索自我，發現內心的光芒' },
+      { hid: 'og:url', property: 'og:url', content: 'https://clairelin.space/service' },
+    ],
+    link: [
+    {
+        rel: "canonical",
+        href: 'https://clairelin.space/service',
+      }
+    ]
+  },
   data() {
     return {
       services: [
@@ -57,7 +72,7 @@ export default {
         },
         {
           name: "靈魂記憶",
-          subtitle: "前世回朔引導觀想",
+          subtitle: "前世記憶引導觀想",
           intro:
             "藉由引導冥想帶你進入前世記憶中，探尋靈魂深處那顆深埋已久的因。",
           img: require("@/assets/image/service/recode.png"),
@@ -145,23 +160,37 @@ img {
 }
 
 .service-content-wrap {
+  padding: 25px 0;
 }
 
 .service-item {
   display: flex;
-  flex-direction: row;
-  &:nth-child(odd) {
-    flex-direction: row-reverse;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
+  @media (min-width: $md) {
+    flex-direction: row;
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
   }
 }
 
 .img-wrap {
   width: 120px;
 }
-.intro-content-wrap {
+.intro-wrap {
   .title-wrap {
     display: flex;
     flex-direction: column;
+    .title{
+      font-size: 1rem;
+    }
+    .subtitle{
+      font-size: 1.25rem;
+    }
   }
+  .des-wrap{}
+  .intro-content-wrap{}
 }
 </style>
