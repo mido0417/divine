@@ -19,8 +19,8 @@
         nuxt-link(to="/blog") BLOG
       li
         nuxt-link(to="/service") Services
-      li
-        a.no-drop PODCAST
+      //- li
+        //- a.no-drop PODCAST
 </template>
 
 <script>
@@ -36,6 +36,49 @@ export default {
       this.isNavToggle = !this.isNavToggle;
       // console.log("11111");
     },
+  },
+
+  mounted() {
+    $(document).ready(function (e) {
+      var xPos = 0;
+      var yPos = 0;
+      var lastScrolled = 0;
+      var __this = this;
+      var MenuH = $(".main-menu").height();
+
+      if ($("#default-layout div:first-child").attr("id") == "index") {
+        $(".banner").css("margin-bottom", MenuH);
+      }
+
+      $(window).resize(function () {
+        var MenuH = $(".main-menu").height();
+        if ($("#default-layout div:first-child").attr("id") == "index") {
+          $(".banner").css("margin-bottom", MenuH);
+        }
+      });
+
+      var menu_scroll_top1 = $(".menu-wrap").offset().top;
+      mainMenuScroll();
+
+      $(window).scroll(function (e) {
+        mainMenuScroll();
+      });
+
+      function mainMenuScroll() {
+        var wt = $(window).scrollTop();
+        var menu_scroll_top2 = $(".menu-wrap").offset().top;
+        if ($("#default-layout div:first-child").attr("id") == "index") {
+          if (wt >= menu_scroll_top2) {
+            $(".menu-wrap").addClass("fix");
+            // console.log('wt >= menu_scroll_top2')
+          }
+
+          if (wt < menu_scroll_top1) {
+            $(".menu-wrap").removeClass("fix");
+          }
+        }
+      }
+    });
   },
 };
 </script>
@@ -135,15 +178,34 @@ a {
   text-align: center;
   font-size: 1.25rem;
   opacity: 0.5;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: $mbc;
+    position: absolute;
+    bottom: -5px;
+    transition: all 0.3s;
+  }
 
   @media (min-width: $md) {
     font-size: 1rem;
+    padding: 0;
   }
   &:hover {
     opacity: 1;
+    &::after {
+      width: 30%;
+    }
   }
   &.nuxt-link-exact-active {
     opacity: 1;
+    &::after {
+      width: 100%;
+    }
   }
 }
 

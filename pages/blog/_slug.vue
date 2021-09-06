@@ -43,7 +43,7 @@ export default {
 
   head() {
     return {
-      title: `${this.article.title} | 生命之歌`,
+      title: `${this.article.title}｜花草魔女 Claier`,
       meta: [
         {
           hid: "description",
@@ -53,7 +53,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: `${this.article.title} | 生命之歌`,
+          content: `${this.article.title}｜花草魔女 Claier`,
         },
         {
           hid: "og:description",

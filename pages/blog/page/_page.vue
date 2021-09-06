@@ -29,7 +29,7 @@ export default {
   },
   head() {
     return {
-      title: `Blog page${this.$route.params.page}|生命之歌`,
+      title: `Blog page${this.$route.params.page}｜花草魔女 Claier`,
       meta: [
         {
           hid: "description",
@@ -39,7 +39,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: `Blog page${this.$route.params.page}|生命之歌`,
+          content: `Blog page${this.$route.params.page}｜花草魔女 Claier`,
         },
         {
           hid: "og:description",
