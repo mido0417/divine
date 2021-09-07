@@ -7,7 +7,7 @@ export default {
         Menu,
         Service002,
     },
-    layout: "default-layout",
+    layout: "index-layout",
     data() {
         return {
             services: [

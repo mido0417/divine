@@ -1,9 +1,7 @@
 <template lang="pug">
 #service.service-page
-  .menu-wrap.full-content
+  .menu-wrap
     Menu
-  //- .banner.full-content
-  //-   h2.page-title 服務介紹
   Banner(:pageinfo="item" v-for="(item,index) of pageinfo", :key="pageinfo.index")
   .container
     .service-content-wrap
@@ -125,23 +123,6 @@ export default {
 img {
   max-width: 100%;
   display: block;
-}
-
-.service-page {
-  overflow: hidden;
-  padding: 0 10px;
-  background-color: $lsc;
-  @media (min-width: $md) {
-    padding: 0 40px;
-  }
-
-  .menu-wrap {
-    padding: 0 10px 0 3px;
-    @media (min-width: $md) {
-      padding: 0 10px;
-    }
-    // background-color: $lac;
-  }
 }
 
 .container {

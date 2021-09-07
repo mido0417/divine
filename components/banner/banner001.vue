@@ -1,11 +1,12 @@
 <template lang="pug">
-.banner.full-content(:style="{'background-image': 'url(' + pageinfo.img + ')'}")
+.banner.full-content(:style="{ 'background-image': 'url(' + pageinfo.img + ')' }")
   h2.page-title {{ pageinfo.title }}
+  h2.page-subtitle(v-if="pageinfo.subtitle") {{ pageinfo.subtitle }}
 </template>
 
 <script>
 export default {
- props:["pageinfo"],
+  props: ["pageinfo"],
 };
 </script>
 
@@ -21,6 +22,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-direction: column;
   @media (min-width: $md) {
     height: 50vh;
   }
@@ -37,15 +39,22 @@ export default {
     pointer-events: none;
     z-index: 0;
   }
-  .page-title {
+  h2 {
     position: relative;
     z-index: 1;
     font-size: 2.02rem;
     color: $lsc;
     text-shadow: 0 0 10px $dsc;
+    letter-spacing: 1px;
+    font-family: "Caudex", "Noto Sans", Arial, sans-serif;
     @media (min-width: $md) {
       font-size: 4.02rem;
     }
+  }
+  .page-subtitle {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    margin-top: 2px;
   }
 }
 </style>

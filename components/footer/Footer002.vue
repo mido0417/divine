@@ -1,5 +1,5 @@
 <template lang="pug">
-footer.footer.full-content
+footer.footer
   .social-menu-wrap
     SocialMenu(
       :socials="item",
@@ -44,6 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
+
   // background: $lac; /* Old browsers */
   // background: -moz-linear-gradient(top, $lac 0%, $mbc 100%); /* FF3.6-15 */
   // background: -webkit-linear-gradient(
