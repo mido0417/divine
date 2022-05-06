@@ -67,10 +67,10 @@ export default {
   // },
   data() {
     return {
-      pagaTitle: "關於我｜花草魔女 Claire",
+      pagaTitle: "關於我 About Me｜Hello,Mido靈性工作室",
       pageinfo: [
         {
-          title: "Claire Lin",
+          title: "Hello Mido",
           subtitle: "美好自己，便能連結世界",
           img: "https://images.unsplash.com/photo-1589289113362-2d177b108bbf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80",
         },

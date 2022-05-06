@@ -39,6 +39,13 @@ export default {
                     alt: "Oil",
                     ready: true,
                 },
+                {
+                    img: require("@/assets/image/service/candle.png"),
+                    title: "能量蠟燭",
+                    link: "services/candle",
+                    alt: "Oil",
+                    ready: true,
+                },
             ],
         };
     },

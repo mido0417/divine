@@ -15,9 +15,11 @@
   nav.menu(:class="{ 'nav-open': isNavToggle }")
     ul
       li
-        nuxt-link(to="/") HOME
+        nuxt-link(to="/") Home
       li
-        a(href="https://hellomido.com/") BLOG
+        nuxt-link(to="/about") About
+      li
+        a(href="https://hellomido.com/") Blog
       li
         nuxt-link(to="/service") Services
       //- li
