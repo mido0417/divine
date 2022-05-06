@@ -46,10 +46,10 @@ export default {
       //   rel: 'stylesheet',
       //   href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'
       // },
-      {
-        rel: "canonical",
-        href: 'https://clairelin.space/',
-      }
+      // {
+      //   rel: "canonical",
+      //   href: 'https://clairelin.space/',
+      // },
     ],
     script: [
       {
@@ -60,6 +60,7 @@ export default {
       {
         src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js',
       },
+      
       // {
       //   src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
       //   integrity:'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM',

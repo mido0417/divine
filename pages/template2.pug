@@ -36,9 +36,9 @@
                     p.wow.animate__animated.animate__fadeInLeft.animate__slow 美好自己，便能連結世界
                     .btn-wrap
                         nuxt-link(to="").contact-btn.more-btn 預約諮詢
-        .blog.full-content
-            ul
-                li.blog-item(v-for="article of topArticles" :key="article.slug")
-                    NuxtLink.blog-link-wrap(:to="{ name: 'blog-slug', params: { slug: article.slug } }") 
-                        p {{ article.title }}
-                        p.read-more 閱讀文章
+        //- .blog.full-content
+        //-     ul
+        //-         li.blog-item(v-for="article of topArticles" :key="article.slug")
+        //-             NuxtLink.blog-link-wrap(:to="{ name: 'blog-slug', params: { slug: article.slug } }") 
+        //-                 p {{ article.title }}
+        //-                 p.read-more 閱讀文章

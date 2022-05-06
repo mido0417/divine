@@ -1,3 +1,9 @@
+@font-face {
+    font-family: FakePearl-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2) format("woff2"),
+        url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff) format("woff");
+}
+
 html,
 body,
 div,
@@ -132,7 +138,8 @@ h4,
 h5,
 h6,
 span {
-    font-family: "Noto Sans", sans-serif, "Caveat", cursive, "Caudex", Arial, sans-serif;
+    // font-family: "Noto Sans", sans-serif, "Caveat", cursive, "Caudex", Arial, sans-serif;
+    font-family: FakePearl-Regular;
 }
 
 .nuxt-content {

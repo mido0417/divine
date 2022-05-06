@@ -1,7 +1,8 @@
 <template lang="pug">
 .main-menu
   .logo-wrap
-    .logo
+    nuxt-link(to="/")
+      .logo
     .slogan
       p Flower Witch
       p.name Claire Lin
@@ -16,7 +17,7 @@
       li
         nuxt-link(to="/") HOME
       li
-        nuxt-link(to="/blog") BLOG
+        a(href="https://hellomido.com/") BLOG
       li
         nuxt-link(to="/service") Services
       //- li
@@ -125,7 +126,7 @@ ul {
   }
 }
 
-a {
+.menu a {
   text-decoration: none;
   text-transform: uppercase;
   color: $mbc;
@@ -192,7 +193,9 @@ a {
 
 .fix {
   .logo {
-    background-image: url("~assets/image/logo/logo_fix.png");
+    // background-image: url("~assets/image/logo/logo_fix.png");
+    -webkit-filter: brightness(500%);
+    filter: brightness(500%);
     background-size: contain;
     width: 60px;
     height: 60px;
