@@ -1,5 +1,5 @@
 <template lang="pug">
-.services-item
+.services-item(v-if="services.ready")
   .img-wrap
     img(:src="services.img" :alt="services.alt")
   .title-wrap

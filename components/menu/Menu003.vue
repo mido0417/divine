@@ -4,8 +4,8 @@
     nuxt-link(to="/")
       .logo
     .slogan
-      p Flower Witch
-      p.name Claire Lin
+      //- p.name Hello, Mido 靈性工作室
+      //- p.name Claire Lin
   button.navbar(
     type="button",
     @click="navToggle",
@@ -196,8 +196,8 @@ ul {
     // background-image: url("~assets/image/logo/logo_fix.png");
     -webkit-filter: brightness(500%);
     filter: brightness(500%);
-    background-size: contain;
-    width: 60px;
+    // background-size: contain;
+    // width: 60px;
     height: 60px;
   }
 
@@ -290,12 +290,13 @@ ul {
 }
 
 .logo {
-  width: 80px;
+  width: 120px;
   height: 80px;
   display: block;
   max-width: 100%;
-  background-image: url("~assets/image/logo/logo.png");
-  background-size: contain;
+  background-image: url("~assets/image/logo/Transparent Logo.svg");
+  background-size: 160%;
+  background-position: center;
   transition: all 0.5s;
 }
 

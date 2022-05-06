@@ -13,31 +13,31 @@ export default {
             services: [
                 {
                     img: require("@/assets/image/service/le-card.png"),
-                    title: "雷諾曼預言占卜",
+                    title: "雷諾曼與塔羅占卜",
                     link: "services/lenormand",
                     alt: "Lenormand",
+                    ready: true,
+                },
+                {
+                    img: require("@/assets/image/service/tarot-card.png"),
+                    title: "塔羅占卜",
+                    link: "services/tarot",
+                    alt: "Tarot",
                     ready: false,
                 },
-                // {
-                //     img: require("@/assets/image/service/tarot-card.png"),
-                //     title: "塔羅占卜",
-                //     link: "services/tarot",
-                //     alt: "Tarot",
-                //     ready: false,
-                // },
                 {
                     img: require("@/assets/image/service/recode.png"),
                     title: "前世回朔引導",
                     link: "services/re",
                     alt: "SoulReCode",
-                    ready: true,
+                    ready: false,
                 },
                 {
                     img: require("@/assets/image/service/potion.png"),
                     title: "客製精油調香",
                     link: "services/oil",
                     alt: "Oil",
-                    ready: false,
+                    ready: true,
                 },
             ],
         };

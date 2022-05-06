@@ -15,15 +15,15 @@ export default {
     htmlAttrs: {
       lang: 'zh-TW'
     },
-    title: '花草魔女 Claire',
+    title: 'Hello, Mido 靈性工作室',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '探索自我，發現內心的光芒' },
+      { hid: 'description', name: 'description', content: '美好自己，便能連結世界' },
       { name: 'keywords', content: '靈性,精油,塔羅,雷諾曼,占卜,靈魂,靈訊,調香,客製精油,花草魔女,魔女,魔法,芳療' },
       { hid: 'og:locale', property: 'og:locale', content: 'zh-TW' },
-      { hid: 'og:title', property: 'og:title', content: '花草魔女 Claire' },
-      { hid: 'og:description', property: 'og:description', content: '探索自我，發現內心的光芒' },
+      { hid: 'og:title', property: 'og:title', content: 'Hello, Mido 靈性工作室' },
+      { hid: 'og:description', property: 'og:description', content: '美好自己，便能連結世界' },
       { hid: 'og:url', property: 'og:url', content: 'https://clairelin.space/' },
       { hid: 'og:image', property: 'og:image', content: 'https://images.unsplash.com/photo-1494797262163-102fae527c62?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
