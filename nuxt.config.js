@@ -5,10 +5,10 @@ let now = new Date();
 
 export default {
 
-  target:'static',
-  router: {
-    base: '/divine/'
-  },
+  // target:'static',
+  // router: {
+  //   base: '/divine/'
+  // },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
