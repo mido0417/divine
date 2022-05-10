@@ -5,10 +5,10 @@ let now = new Date();
 
 export default {
 
-  target:'static',
-  router: {
-    base: '/divine/'
-  },
+  // target:'static',
+  // router: {
+  //   base: '/divine/'
+  // },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -24,12 +24,12 @@ export default {
       { hid: 'og:locale', property: 'og:locale', content: 'zh-TW' },
       { hid: 'og:title', property: 'og:title', content: 'Hello, Mido 靈性工作室' },
       { hid: 'og:description', property: 'og:description', content: '美好自己，便能連結世界' },
-      { hid: 'og:url', property: 'og:url', content: 'https://clairelin.space/' },
+      { hid: 'og:url', property: 'og:url', content: '' },
       { hid: 'og:image', property: 'og:image', content: 'https://images.unsplash.com/photo-1494797262163-102fae527c62?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=700&q=80' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
     ],
     link: [
-      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      { rel: 'icon', type: 'image/svg+xml', href: '/divine/favicon.svg' },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans:wght@400;700&family=Caveat&family=Caudex&display=swap'
