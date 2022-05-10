@@ -21,19 +21,19 @@ export default {
         {
           name: "fb",
           icon: "fab fa-facebook",
-          link: "",
-          ready: false,
+          link: "https://www.facebook.com/hello.mido417",
+          ready: true,
         },
         {
           name: "ig",
           icon: "fab fa-instagram",
-          link: "https://www.instagram.com/claire.lin417/",
+          link: "https://www.instagram.com/hello.mido417/",
           ready: true,
         },
         {
           name: "mail",
           icon: "far fa-envelope",
-          link: "mailto:claire.lin@clairelin.space",
+          link: "mailto:midorin6497@gmail.com",
           ready: true,
         },
       ],
