@@ -12,35 +12,35 @@ export default {
         return {
             services: [
                 {
-                    img: require("@/assets/image/service/le-card.png"),
+                    img: "https://images.plurk.com/sTWJXhy4UEUGqzV1tEgnJ.png",
                     title: "雷諾曼與塔羅占卜",
                     link: "services/lenormand",
                     alt: "Lenormand",
                     ready: true,
                 },
                 {
-                    img: require("@/assets/image/service/tarot-card.png"),
+                    img: "",
                     title: "塔羅占卜",
                     link: "services/tarot",
                     alt: "Tarot",
                     ready: false,
                 },
                 {
-                    img: require("@/assets/image/service/recode.png"),
+                    img: "",
                     title: "前世回朔引導",
                     link: "services/re",
                     alt: "SoulReCode",
                     ready: false,
                 },
                 {
-                    img: require("@/assets/image/service/potion.png"),
+                    img: "https://images.plurk.com/62z6RmAW9XltxAh0bioUoS.png",
                     title: "客製精油調香",
                     link: "services/oil",
                     alt: "Oil",
                     ready: true,
                 },
                 {
-                    img: require("@/assets/image/service/candle.png"),
+                    img: "https://images.plurk.com/1SL0Nz89VykTY3GqmvWJNB.png",
                     title: "能量蠟燭",
                     link: "services/candle",
                     alt: "Oil",

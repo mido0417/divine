@@ -12,7 +12,7 @@
     .about-content-wrap
       .photo-wrap.wow.animate__animated.animate__fadeIn(data-wow-offset="30")
         .color-box
-        img.avatar(src="~assets/image/8.png", alt="avatar")
+        img.avatar(src="https://images.plurk.com/3u0EiPcyJKgQFrtRcMmy1y.png", alt="avatar")
       .intro-content-wrap
         p 在還沒接觸到精油的時候，路上時常聞到的香水和擴香都是我的剋星。
         p 那些香精的氣味會讓我的鼻子過敏到鼻塞流鼻水兼打噴嚏，說有多不舒服就有多不舒服⋯

@@ -78,7 +78,7 @@ export default {
           subtitle: "雷諾曼預言占卜",
           intro:
             "利用雷諾曼強大的劇情推演能力，來推測所問之事的未來發展與走向。",
-          img: require("@/assets/image/service/le-intro.jpg"),
+          img: "https://images.plurk.com/2x1mbwbUhOBlszYLWGd34M.jpg",
           content01: "",
           content02: "",
           content03: "",
@@ -88,7 +88,7 @@ export default {
         //   subtitle: "塔羅占卜",
         //   intro:
         //     "受過往經驗束縛而失去前進的勇氣，想探索靈魂深處真實的自己，讓塔羅牌來輔佐你看到不一樣的自己",
-        //   img: require("@/assets/image/service/tarot-card.png"),
+        //   img: "",
         //   content01: "",
         //   content02: "",
         //   content03: "",
@@ -98,7 +98,7 @@ export default {
           subtitle: "前世記憶引導觀想",
           intro:
             "藉由引導冥想帶你進入前世記憶中，探尋靈魂深處那顆深埋已久的因。",
-          img: require("@/assets/image/service/door.jpg"),
+          img: "https://images.plurk.com/uQmDo1KBUgBfXnJRmJP9D.jpg",
           content01: "",
           content02: "",
           content03: "",
@@ -108,7 +108,7 @@ export default {
           subtitle: "個人專屬精油調製",
           intro:
             "精油是大地贈與我們的禮物，利用精油調製出適合你當前能量狀態的專屬精油。",
-          img: require("@/assets/image/service/oil.jpg"),
+          img: "https://images.plurk.com/6LKFPmDGz3q5XrYFMVj5jn.jpg",
           content01: "",
           content02: "",
           content03: "",
