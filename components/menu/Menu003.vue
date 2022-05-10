@@ -296,7 +296,8 @@ ul {
   height: 80px;
   display: block;
   max-width: 100%;
-  background-image: url("~assets/image/logo/Transparent Logo.svg");
+  // background-image: url("~assets/image/logo/Transparent Logo.svg");
+  background-image: url("https://images.plurk.com/42dWGbhoH6gt5swEJjZs9E.png");
   background-size: 160%;
   background-position: center;
   transition: all 0.5s;

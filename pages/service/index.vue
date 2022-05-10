@@ -34,7 +34,7 @@ export default {
   },
   layout: "default-layout",
   head: {
-    title: "服務介紹｜花草魔女 Claire",
+    title: "服務介紹｜Hello,Mido靈性工作室",
     meta: [
       {
         hid: "description",
@@ -44,7 +44,7 @@ export default {
       {
         hid: "og:title",
         property: "og:title",
-        content: "服務介紹｜花草魔女 Claire",
+        content: "服務介紹｜Hello,Mido靈性工作室",
       },
       {
         hid: "og:description",
@@ -54,13 +54,13 @@ export default {
       {
         hid: "og:url",
         property: "og:url",
-        content: "https://clairelin.space/service",
+        content: "",
       },
     ],
     link: [
       {
         rel: "canonical",
-        href: "https://clairelin.space/service",
+        href: "",
       },
     ],
   },
