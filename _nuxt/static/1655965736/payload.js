@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/", (function(a){return {data:[{topArticles:[{slug:"202109booking",title:"2021.09可預約時間",top:a,createdAt:"2021-09-12T00:00:00.000Z"},{slug:"dream-record-02",title:"夢境紀錄02：德古拉的眷屬",top:a,createdAt:"2021-02-06T00:00:00.000Z"},{slug:"dream-record-01",title:"夢境紀錄01：異世界抓交替",top:a,createdAt:"2021-01-19T00:00:00.000Z"}]}],fetch:[],mutations:void 0}}(true)));

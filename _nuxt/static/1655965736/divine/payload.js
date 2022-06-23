@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/divine", {data:[{}],fetch:[],mutations:void 0});
