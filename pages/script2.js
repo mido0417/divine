@@ -12,18 +12,18 @@ export default {
         return {
             services: [
                 {
-                    img: "https://images.plurk.com/sTWJXhy4UEUGqzV1tEgnJ.png",
-                    title: "雷諾曼與塔羅占卜",
+                    img: "https://images.plurk.com/6OP9qdSDNFwM4gVObgehjM.png",
+                    title: "精油絮語占卜",
                     link: "services/lenormand",
                     alt: "Lenormand",
                     ready: true,
                 },
                 {
-                    img: "",
-                    title: "塔羅占卜",
-                    link: "services/tarot",
-                    alt: "Tarot",
-                    ready: false,
+                    img: "https://images.plurk.com/1Yr3hCfhtjKN0z6k1VkuWV.png",
+                    title: "薩滿鼓療癒",
+                    link: "services/shaman",
+                    alt: "shaman",
+                    ready: true,
                 },
                 {
                     img: "",
@@ -34,17 +34,17 @@ export default {
                 },
                 {
                     img: "https://images.plurk.com/62z6RmAW9XltxAh0bioUoS.png",
-                    title: "客製精油調香",
+                    title: "客製化精油調香",
                     link: "services/oil",
                     alt: "Oil",
                     ready: true,
                 },
                 {
                     img: "https://images.plurk.com/1SL0Nz89VykTY3GqmvWJNB.png",
-                    title: "能量蠟燭",
-                    link: "services/candle",
-                    alt: "Oil",
-                    ready: true,
+                    title: "能量香氛",
+                    link: "services/aroma",
+                    alt: "aroma",
+                    ready: false,
                 },
             ],
         };

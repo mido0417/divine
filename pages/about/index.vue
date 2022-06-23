@@ -67,7 +67,7 @@ export default {
   // },
   data() {
     return {
-      pagaTitle: "關於我 About Me｜Hello,Mido靈性工作室",
+      pagaTitle: "關於我 About Me｜Hello,Mido身心靈工作室",
       pageinfo: [
         {
           title: "Hello Mido",

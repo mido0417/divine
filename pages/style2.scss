@@ -94,9 +94,8 @@ body {
 }
 
 .container {
-padding-top: 10px;
+  padding-top: 10px;
   @media (min-width: $md) {
-
   }
 
   p {
@@ -109,6 +108,8 @@ padding-top: 10px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto 50px;
     @media (min-width: $md) {
       flex-direction: row;
       justify-content: center;
@@ -364,6 +365,9 @@ padding-top: 10px;
 .intro,
 .services {
   margin-bottom: 50px;
+  @media (min-width: $md) {
+    margin-bottom: 80px;
+  }
 }
 
 .more-btn {
@@ -384,10 +388,25 @@ padding-top: 10px;
   }
 }
 
-.main-menu{
+.main-menu {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 10;
+}
+
+.mobil {
+  display: inline-block;
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.pc {
+  display: none;
+
+  @media (min-width: $md) {
+    display: inline-block;
+  }
 }
